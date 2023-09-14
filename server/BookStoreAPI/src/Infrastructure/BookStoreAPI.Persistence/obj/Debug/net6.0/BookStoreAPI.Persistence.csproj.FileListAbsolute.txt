@@ -1,0 +1,12 @@
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\bin\Debug\net6.0\BookStoreAPI.Persistence.deps.json
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\bin\Debug\net6.0\BookStoreAPI.Persistence.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\bin\Debug\net6.0\BookStoreAPI.Persistence.pdb
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\obj\Debug\net6.0\BookStoreAPI.Persistence.csproj.AssemblyReference.cache
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\obj\Debug\net6.0\BookStoreAPI.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\obj\Debug\net6.0\BookStoreAPI.Persistence.AssemblyInfoInputs.cache
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\obj\Debug\net6.0\BookStoreAPI.Persistence.AssemblyInfo.cs
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\obj\Debug\net6.0\BookStoreAPI.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\obj\Debug\net6.0\BookStoreAPI.Persistence.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\obj\Debug\net6.0\refint\BookStoreAPI.Persistence.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\obj\Debug\net6.0\BookStoreAPI.Persistence.pdb
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\obj\Debug\net6.0\ref\BookStoreAPI.Persistence.dll

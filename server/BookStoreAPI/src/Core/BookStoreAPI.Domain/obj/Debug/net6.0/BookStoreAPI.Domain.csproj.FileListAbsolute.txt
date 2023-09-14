@@ -1,0 +1,12 @@
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\bin\Debug\net6.0\BookStoreAPI.Domain.deps.json
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\bin\Debug\net6.0\BookStoreAPI.Domain.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\bin\Debug\net6.0\BookStoreAPI.Domain.pdb
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\obj\Debug\net6.0\BookStoreAPI.Domain.csproj.AssemblyReference.cache
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\obj\Debug\net6.0\BookStoreAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\obj\Debug\net6.0\BookStoreAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\obj\Debug\net6.0\BookStoreAPI.Domain.AssemblyInfo.cs
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\obj\Debug\net6.0\BookStoreAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\obj\Debug\net6.0\BookStoreAPI.Domain.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\obj\Debug\net6.0\refint\BookStoreAPI.Domain.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\obj\Debug\net6.0\BookStoreAPI.Domain.pdb
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Domain\obj\Debug\net6.0\ref\BookStoreAPI.Domain.dll
