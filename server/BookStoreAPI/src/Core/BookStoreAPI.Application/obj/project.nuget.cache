@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "YwfX6JeIovWbmrK16ns8q/M0yFKfGZqDCmjufPFwprpmkmmieoWKnsMwAnJdsh22ImmNg1ElVAj60oydN0Ba6g==",
+  "dgSpecHash": "rg1hreOj/TxXKF88oBxMVRy/wRdGHZvetxW1aaMzUpwfu66dUBQRO/QPKCErK2K2V5n63QIrp1aHl9fOLKEoZw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Администратор\\Desktop\\BookStore\\server\\BookStoreAPI\\src\\Core\\BookStoreAPI.Application\\BookStoreAPI.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Администратор\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
