@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "rg1hreOj/TxXKF88oBxMVRy/wRdGHZvetxW1aaMzUpwfu66dUBQRO/QPKCErK2K2V5n63QIrp1aHl9fOLKEoZw==",
+  "dgSpecHash": "9GOXVqG4UvhES+hkH/cRJFjkR3EormDZ39H/qZ7Q+xz8u58WoLrT/qzd5OMUVGVaYnhS7ao48k8ko3dJ6RA2TQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Администратор\\Desktop\\BookStore\\server\\BookStoreAPI\\src\\Core\\BookStoreAPI.Application\\BookStoreAPI.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Администратор\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

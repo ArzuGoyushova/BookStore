@@ -10,3 +10,6 @@ C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Co
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Application\obj\Debug\net6.0\refint\BookStoreAPI.Application.dll
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Application\obj\Debug\net6.0\BookStoreAPI.Application.pdb
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Application\obj\Debug\net6.0\ref\BookStoreAPI.Application.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Application\bin\Debug\net6.0\BookStoreAPI.Domain.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Application\bin\Debug\net6.0\BookStoreAPI.Domain.pdb
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Core\BookStoreAPI.Application\obj\Debug\net6.0\BookStoreAPI.Application.csproj.CopyComplete

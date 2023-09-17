@@ -7,17 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
-    <Folder Include="Exceptions\" />
-    <Folder Include="Features\" />
-    <Folder Include="Interfaces\Repository\" />
+    <Folder Include="DTOs\Book\" />
+    <Folder Include="DTOs\Author\" />
+    <Folder Include="DTOs\Genre\" />
+    <Folder Include="DTOs\Language\" />
+    <Folder Include="Features\Commands\" />
+    <Folder Include="Features\Queries\" />
     <Folder Include="Wrappers\" />
-    <Folder Include="Profiles\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookStoreAPI.Domain\BookStoreAPI.Domain.csproj" />
   </ItemGroup>
 
 </Project>
