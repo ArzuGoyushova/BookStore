@@ -69,3 +69,8 @@ C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\AP
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\BookStoreAPI.Domain.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\BookStoreAPI.Persistence.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\BookStoreAPI.Persistence.pdb
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\BookStoreAPI.Domain.pdb

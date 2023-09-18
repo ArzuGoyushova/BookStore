@@ -1,5 +1,4 @@
-﻿using BookStoreAPI.Domain.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BookStoreAPI.Domain.Entities
 {
-    public class BookLanguage : BaseEntity
+    public class StripeSettings
     {
+        public string PublishableKey { get; set; }
+        public string SecretKey { get; set; }
     }
 }
