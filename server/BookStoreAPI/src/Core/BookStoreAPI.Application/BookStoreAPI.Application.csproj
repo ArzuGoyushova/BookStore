@@ -9,8 +9,6 @@
   <ItemGroup>
     <Folder Include="DTOs\Book\" />
     <Folder Include="DTOs\Author\" />
-    <Folder Include="DTOs\Genre\" />
-    <Folder Include="DTOs\Language\" />
     <Folder Include="Features\Commands\" />
     <Folder Include="Features\Queries\" />
     <Folder Include="Wrappers\" />
@@ -19,6 +17,7 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
   </ItemGroup>
 

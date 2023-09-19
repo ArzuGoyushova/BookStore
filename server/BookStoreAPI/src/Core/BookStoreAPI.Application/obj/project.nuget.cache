@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "/8OagsKXztO08kMdLCkCHSDfko+5Y7ZUesaUDOpDcUFnH0KHl39ETQbtHRiz09AcZXBuuX2bNeI0KJEGUWPXwA==",
+  "dgSpecHash": "pDOGG5af1ysKoO9KAzoZYmVuU6330hmHcwZnQdLOnRyQKO1okc5Mvy91fO/EbNzxJTV34zGiunMtk4U9lqhoDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Администратор\\Desktop\\BookStore\\server\\BookStoreAPI\\src\\Core\\BookStoreAPI.Application\\BookStoreAPI.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Администратор\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",

@@ -12,6 +12,7 @@ namespace BookStoreAPI.Domain.Entities
         public string? Title { get; set; }
         public double? OldPrice { get; set; }
         public double RegularPrice { get; set; }
+        public int? Discount { get; set; }
         public int Count { get; set; }
         public Guid AuthorId { get; set; }
         public Author? Author { get; set; }
