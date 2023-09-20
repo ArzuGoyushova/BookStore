@@ -13,7 +13,7 @@ namespace BookStoreAPI.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<Book> builder)
         {
-            builder.Property(b => b.OldPrice).IsRequired(true).HasDefaultValue(60.0);
+            builder.Property(b => b.OldPrice).HasDefaultValue(60.0);
             builder.Property(b => b.RegularPrice).IsRequired(true).HasDefaultValue(46.0);
             builder.Property(b => b.OldPrice).HasColumnType("decimal(18,2)");
             builder.Property(b => b.RegularPrice).HasColumnType("decimal(18,2)");

@@ -74,3 +74,14 @@ C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\AP
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\BookStoreAPI.Persistence.dll
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\BookStoreAPI.Persistence.pdb
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\BookStoreAPI.Domain.pdb
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\MediatR.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\BookStoreAPI.Application.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\API\BookStore.WebAPI\bin\Debug\net6.0\BookStoreAPI.Application.pdb

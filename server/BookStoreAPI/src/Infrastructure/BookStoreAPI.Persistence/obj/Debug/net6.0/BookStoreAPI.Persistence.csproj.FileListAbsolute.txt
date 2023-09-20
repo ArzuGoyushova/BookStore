@@ -13,3 +13,5 @@ C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\In
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\bin\Debug\net6.0\BookStoreAPI.Domain.dll
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\bin\Debug\net6.0\BookStoreAPI.Domain.pdb
 C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\obj\Debug\net6.0\BookStoreAPI.Persistence.csproj.CopyComplete
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\bin\Debug\net6.0\BookStoreAPI.Application.dll
+C:\Users\Администратор\Desktop\BookStore\server\BookStoreAPI\src\Infrastructure\BookStoreAPI.Persistence\bin\Debug\net6.0\BookStoreAPI.Application.pdb

@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BookStoreAPI.Persistence.Repositories;
+using BookStoreAPI.Application.Interfaces.Repository;
 
 namespace BookStoreAPI.Persistence
 {
@@ -17,6 +19,11 @@ namespace BookStoreAPI.Persistence
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(config.GetConnectionString("DefaultConnection"))
             );
+            services.AddScoped<IAuthorRepository, AuthorRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<IGenreRepository, GenreRepository>();
+            services.AddScoped<ILanguageRepository, LanguageRepository>();
+            services.AddScoped<ISubscriberRepository, SubscriberRepository>();
         }
     }
 }

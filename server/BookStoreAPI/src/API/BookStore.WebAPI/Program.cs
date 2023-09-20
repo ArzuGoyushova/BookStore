@@ -1,5 +1,6 @@
+using BookStoreAPI.Application;
 using BookStoreAPI.Persistence;
-using static Org.BouncyCastle.Math.EC.ECCurve;
+
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
@@ -11,7 +12,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.PersistenceServiceRegister(config);
+builder.Services.ApplicationServiceRegister();
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

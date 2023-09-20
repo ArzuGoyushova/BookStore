@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="DAL\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\BookStoreAPI.Application\BookStoreAPI.Application.csproj" />
     <ProjectReference Include="..\..\Core\BookStoreAPI.Domain\BookStoreAPI.Domain.csproj" />
   </ItemGroup>
 
