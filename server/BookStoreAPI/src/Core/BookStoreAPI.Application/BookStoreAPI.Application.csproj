@@ -10,8 +10,6 @@
     <Folder Include="DTOs\Account\" />
     <Folder Include="DTOs\Subscriber\" />
     <Folder Include="DTOs\Review\" />
-    <Folder Include="Features\Commands\" />
-    <Folder Include="Features\Queries\" />
     <Folder Include="Wrappers\" />
   </ItemGroup>
 

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using BookStoreAPI.Application.DTOs.Genre;
+using BookStoreAPI.Application.DTOs.Language;
 using BookStoreAPI.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -12,8 +14,12 @@ namespace BookStoreAPI.Application.Profiles
     public class MapProfile : Profile
     {
         public MapProfile() 
-        { 
+        {
+            CreateMap<Genre, GenreCreateOrUpdateDTO>().ReverseMap();
+            CreateMap<Genre, GenreViewDTO>().ReverseMap();
 
+            CreateMap<Language, LanguageCreateOrUpdateDTO>().ReverseMap();
+            CreateMap<Language, LanguageViewDTO>().ReverseMap();
         }
         public static List<Picture> MapPictures(List<IFormFile> formFiles, string imageType)
         {

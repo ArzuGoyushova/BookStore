@@ -1,16 +1,17 @@
-﻿using BookStoreAPI.Application.Features.Commands.GenreCommands;
-using BookStoreAPI.Application.Features.Queries.GenreQueries;
+﻿using BookStoreAPI.Application.Features.Commands.LanguageCommands;
+using BookStoreAPI.Application.Features.Queries.LanguageQueries;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GenreController : ControllerBase
+    public class LanguageController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public GenreController(IMediator mediator)
+        public LanguageController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -18,7 +19,7 @@ namespace BookStore.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var query = new GetAllGenresQuery();
+            var query = new GetAllLanguagesQuery();
             var response = await _mediator.Send(query);
             return Ok(response.Value);
         }
@@ -27,7 +28,7 @@ namespace BookStore.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
-            var query = new GetGenreByIdQuery { Id = id };
+            var query = new GetLanguageByIdQuery { Id = id };
             var response = await _mediator.Send(query);
 
             if (response.Value == null)
@@ -39,16 +40,16 @@ namespace BookStore.WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CreateGenreCommand command)
+        public async Task<IActionResult> Create(CreateLanguageCommand command)
         {
             var response = await _mediator.Send(command);
             return Ok(response.Value);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, UpdateGenreCommand command)
+        public async Task<IActionResult> Update(Guid id, UpdateLanguageCommand command)
         {
-            if (id != command.GenreId)
+            if (id != command.LanguageId)
             {
                 return BadRequest();
             }
@@ -61,7 +62,7 @@ namespace BookStore.WebAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var command = new DeleteGenreCommand { GenreId = id };
+            var command = new DeleteLanguageCommand { LanguageId = id };
             var response = await _mediator.Send(command);
             return Ok(response.Value);
         }
