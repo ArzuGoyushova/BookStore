@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BookStoreAPI.Application.DTOs.Author;
 using BookStoreAPI.Application.DTOs.Genre;
 using BookStoreAPI.Application.DTOs.Language;
 using BookStoreAPI.Domain.Entities;
@@ -20,6 +21,11 @@ namespace BookStoreAPI.Application.Profiles
 
             CreateMap<Language, LanguageCreateOrUpdateDTO>().ReverseMap();
             CreateMap<Language, LanguageViewDTO>().ReverseMap();
+
+            CreateMap<Author, AuthorCreateOrUpdateDTO>().ReverseMap();
+            CreateMap<Author, AuthorViewDTO>()
+                .ForMember(dest=>dest.Books, opt=>opt.MapFrom(src=>src.Books))
+                .ReverseMap();
         }
         public static List<Picture> MapPictures(List<IFormFile> formFiles, string imageType)
         {
