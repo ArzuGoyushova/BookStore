@@ -13,13 +13,22 @@ namespace BookStoreAPI.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<Book> builder)
         {
-            builder.Property(b => b.OldPrice).HasDefaultValue(60.0);
-            builder.Property(b => b.RegularPrice).IsRequired(true).HasDefaultValue(46.0);
-            builder.Property(b => b.OldPrice).HasColumnType("decimal(18,2)");
-            builder.Property(b => b.RegularPrice).HasColumnType("decimal(18,2)");
+            builder.Property(b => b.OldPrice)
+                .HasColumnType("decimal(18,2)")
+                .HasDefaultValue(0.0);
+
+            builder.Property(b => b.RegularPrice)
+                .HasColumnType("decimal(18,2)")
+                .IsRequired(true)
+                .HasDefaultValue(0.0);
+
             builder.Property(b => b.Discount)
-            .HasComputedColumnSql("CAST((([RegularPrice] - [OldPrice]) / [OldPrice]) * 100 AS INT)");
-            builder.Property(b => b.Count).IsRequired(true).HasDefaultValue(1);
+                .HasComputedColumnSql("CAST(((COALESCE([RegularPrice], 0) - COALESCE([OldPrice], 0)) / COALESCE(NULLIF([OldPrice], 0), 1)) * 100 AS INT)");
+
+            builder.Property(b => b.Count)
+                .IsRequired()
+                .HasDefaultValue(1);
         }
+
     }
 }

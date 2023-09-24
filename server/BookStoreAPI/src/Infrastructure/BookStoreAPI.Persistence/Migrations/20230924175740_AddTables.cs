@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BookStoreAPI.Persistence.Migrations
 {
-    public partial class addTables : Migration
+    public partial class AddTables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -58,6 +58,7 @@ namespace BookStoreAPI.Persistence.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FullName = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -232,9 +233,9 @@ namespace BookStoreAPI.Persistence.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    OldPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false, defaultValue: 60m),
-                    RegularPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false, defaultValue: 46m),
-                    Discount = table.Column<int>(type: "int", nullable: true, computedColumnSql: "CAST((([RegularPrice] - [OldPrice]) / [OldPrice]) * 100 AS INT)"),
+                    OldPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: true, defaultValue: 0m),
+                    RegularPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false, defaultValue: 0m),
+                    Discount = table.Column<int>(type: "int", nullable: true, computedColumnSql: "CAST(((COALESCE([RegularPrice], 0) - COALESCE([OldPrice], 0)) / COALESCE(NULLIF([OldPrice], 0), 1)) * 100 AS INT)"),
                     Count = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
                     AuthorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     LanguageId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -381,10 +382,10 @@ namespace BookStoreAPI.Persistence.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "51ec431c-8128-403b-a83b-a2575c083a2c", "57cd79dc-56aa-42bd-b50e-08a674c2fb82", "SalesManager", "SALESMANAGER" },
-                    { "63183683-a1e1-43bf-93a7-b59454d3983b", "1b093475-6492-4928-a8b7-4779a789661c", "Admin", "ADMIN" },
-                    { "8ccbb4a5-1af0-4c41-940a-30761c343d78", "12ea2d96-cc06-4cb3-9303-389e9912ee6a", "SuperAdmin", "SUPERADMIN" },
-                    { "f62d8845-7fe0-458a-9391-420f3680c9a1", "ab3496b5-30cd-44a0-8943-4593909f0765", "Member", "MEMBER" }
+                    { "498586e3-0fa8-409f-ac1c-54ada49f7748", "3fecb33d-74d7-4943-9e6a-f28723d3668e", "SalesManager", "SALESMANAGER" },
+                    { "596d0365-0a7d-4b56-8944-e5e6c73733f5", "7aaacf92-a6d8-42fc-94a3-b1fa30978f0f", "Member", "MEMBER" },
+                    { "7072bd60-1935-4262-a12d-b3970049f3c9", "d2b40a3f-a5d7-4b29-9340-b697ad795f32", "Admin", "ADMIN" },
+                    { "dacd7fc1-dc01-4d41-bded-8639b4261c2d", "55e00be6-a71b-4e40-bbd8-72b86c043bee", "SuperAdmin", "SUPERADMIN" }
                 });
 
             migrationBuilder.InsertData(
@@ -392,25 +393,25 @@ namespace BookStoreAPI.Persistence.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "ConnectionId", "Email", "EmailConfirmed", "FullName", "IsBlocked", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName", "VerificationRequestId" },
                 values: new object[,]
                 {
-                    { "3564cc34-a901-4cfd-a68d-d64ff7da1a87", 0, "d3e84b1c-af66-4ec6-8464-c1c9c6d075d9", null, "superadmin@gmail.com", true, "Super Admin", false, false, null, "SUPERADMIN@GMAIL.COM", "SUPERADMIN", "AQAAAAEAACcQAAAAEASPsxzKPFPyZm4tK7GXjtF/rlXuvqZIi+5IxTcmW/c/S+8Bi9ymW5fVFqyguelkLA==", "+0987654321", true, "af70d351-c81e-41d1-b4a4-b3b19e3a4d6b", false, "superadmin", "ver1" },
-                    { "a793b468-f1e1-499f-a298-b84a5c02dbbc", 0, "ce448ee2-61f9-491a-975e-a099368ad760", null, "admin@gmail.com", true, "Admin", false, false, null, "ADMIN@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEAVY1E4uNRgtXBgZa1a+/T9//PWUXBZBvangn3ZYM3ltC9i4XRz5OJzS5QqUGsUVEg==", "+1234567890", true, "985e9058-08ed-4039-a378-624a508ce300", false, "admin", "ver2" },
-                    { "bc7be8d3-faa2-4447-ac27-89f84bad869f", 0, "b6a7dc28-45f4-4cc6-9996-0ded239d26cb", null, "salesmanager@gmail.com", true, "Sales Manager", false, false, null, "SALESMANAGER@GMAIL.COM", "SALESMANAGER", "AQAAAAEAACcQAAAAEMaA/l9fEKigpcTfJk7x4Y8v3IaaCmW2YtCUxRnLWUGBhmVZN4OqkeR3/8oR+cuZgQ==", "+0987654323", true, "9866eb3e-4b02-4c47-9541-34bc55135166", false, "salesmanager", "ver3" }
+                    { "3b0341dc-3f7d-45e0-a2c8-352b17e7e360", 0, "37e1cc5c-3a81-4948-a300-c8595482a8f4", null, "superadmin@gmail.com", true, "Super Admin", false, false, null, "SUPERADMIN@GMAIL.COM", "SUPERADMIN", "AQAAAAEAACcQAAAAEMekaPXU8BwYmCr3w9NDiCJEVduE3c91hPAV5+Uz0DftzO5xEmo2BU7LPWg0PhTIcA==", "+0987654321", true, "145896a2-b51c-466a-95b3-b9ce4b8fb1e3", false, "superadmin", "ver1" },
+                    { "4a8e3791-d0f1-4de9-a1ef-2dfe6e58ec7b", 0, "9ee3db31-7527-4f1d-a5ed-24b7589cad2c", null, "salesmanager@gmail.com", true, "Sales Manager", false, false, null, "SALESMANAGER@GMAIL.COM", "SALESMANAGER", "AQAAAAEAACcQAAAAEPGenlEWVOO6ntwzlmHhokM+zphuOm2BPDF5DYTviFj/vZx9jWhkTaZH6vMubvpXoQ==", "+0987654323", true, "19d3424d-b245-4257-8ca4-403ae6d03d4a", false, "salesmanager", "ver3" },
+                    { "e561c45f-df53-4969-96b8-0fc44437afda", 0, "d2577df1-7ac4-41f7-94f2-f667cfaa1068", null, "admin@gmail.com", true, "Admin", false, false, null, "ADMIN@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEH/xiIz5z40b/WlL0kC1KIMyrbOX7FOgOH4Wuyo1G10KeqD4M4OQ9PXbn4qDMCIPhg==", "+1234567890", true, "c3e2923d-0583-495d-ae38-58e63c3d1ba8", false, "admin", "ver2" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { "8ccbb4a5-1af0-4c41-940a-30761c343d78", "3564cc34-a901-4cfd-a68d-d64ff7da1a87" });
+                values: new object[] { "dacd7fc1-dc01-4d41-bded-8639b4261c2d", "3b0341dc-3f7d-45e0-a2c8-352b17e7e360" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { "63183683-a1e1-43bf-93a7-b59454d3983b", "a793b468-f1e1-499f-a298-b84a5c02dbbc" });
+                values: new object[] { "498586e3-0fa8-409f-ac1c-54ada49f7748", "4a8e3791-d0f1-4de9-a1ef-2dfe6e58ec7b" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { "51ec431c-8128-403b-a83b-a2575c083a2c", "bc7be8d3-faa2-4447-ac27-89f84bad869f" });
+                values: new object[] { "7072bd60-1935-4262-a12d-b3970049f3c9", "e561c45f-df53-4969-96b8-0fc44437afda" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

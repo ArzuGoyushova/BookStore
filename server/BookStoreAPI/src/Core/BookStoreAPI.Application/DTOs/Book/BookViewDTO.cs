@@ -18,9 +18,9 @@ namespace BookStoreAPI.Application.DTOs.Book
         public double RegularPrice { get; set; }
         public int? Discount { get; set; }
         public int Count { get; set; }
-        public AuthorViewDTO Author { get; set; }
-        public LanguageViewDTO Language { get; set; }
-        public List<GenreViewDTO> Genres { get; set; }
+        public Guid AuthorId { get; set; }
+        public Guid LanguageId { get; set; }
+        public List<Guid> GenreIds { get; set; }
         public List<string> ImageUrls { get; set; }
         public BookDetailViewDTO BookDetail { get; set; }
     }

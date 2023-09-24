@@ -13,7 +13,6 @@ namespace BookStoreAPI.Application.DTOs.Book
 {
     public class BookCreateOrUpdateDTO
     {
-        public Guid Id { get; set; }
         public string? Title { get; set; }
         public double? OldPrice { get; set; }
         public double RegularPrice { get; set; }
@@ -24,11 +23,7 @@ namespace BookStoreAPI.Application.DTOs.Book
         public List<Guid> GenreIds { get; set; }
         public List<IFormFile>? ExistingPictures { get; set; }
         public List<IFormFile>? NewPictures { get; set; }
-        public string Format { get; set; }
-        public string Size { get; set; }
-        public DateTime ReleaseDate { get; set; }
-        public int PageCount { get; set; }
-        public string Description { get; set; }
+        public BookDetailViewDTO BookDetail { get; set; }
     }
     public class BookCreateOrUpdateDtoValidator : AbstractValidator<BookCreateOrUpdateDTO>
     {
@@ -69,25 +64,6 @@ namespace BookStoreAPI.Application.DTOs.Book
                 .NotEmpty()
                 .WithMessage("Please select at least one genre.");
 
-            RuleFor(x => x.Format)
-                .NotEmpty()
-                .WithMessage("Please fill in the field.");
-
-            RuleFor(x => x.Size)
-                .NotEmpty()
-                .WithMessage("Please fill in the field.");
-
-            RuleFor(x => x.ReleaseDate)
-                .NotEmpty()
-                .WithMessage("Please select a release date.");
-
-            RuleFor(x => x.PageCount)
-                .GreaterThan(0)
-                .WithMessage("PageCount must be greater than 0.");
-
-            RuleFor(x => x.Description)
-                .NotEmpty()
-                .WithMessage("Please fill in the field.");
         }
     }
 }

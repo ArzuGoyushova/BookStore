@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BookStoreAPI.Application.DTOs.Author;
+using BookStoreAPI.Application.DTOs.Book;
 using BookStoreAPI.Application.DTOs.Genre;
 using BookStoreAPI.Application.DTOs.Language;
 using BookStoreAPI.Domain.Entities;
@@ -26,6 +27,29 @@ namespace BookStoreAPI.Application.Profiles
             CreateMap<Author, AuthorViewDTO>()
                 .ForMember(dest=>dest.Books, opt=>opt.MapFrom(src=>src.Books))
                 .ReverseMap();
+
+            CreateMap<Book, BookViewDTO>()
+                .ForMember(dest => dest.ImageUrls, opt => opt.MapFrom(src => src.Pictures.Select(b => b.ImageUrl)))
+                .ForMember(dest => dest.GenreIds, opt => opt.MapFrom(src => src.BookGenres.Select(b => b.GenreId)))
+                .ForMember(dest => dest.BookDetail, opt => opt.MapFrom(src => src.BookDetail)).ReverseMap();
+            
+            CreateMap<BookDetail, BookDetailViewDTO>().ReverseMap();
+
+            CreateMap<BookCreateOrUpdateDTO, Book>()
+                .ForMember(dest => dest.BookGenres, opt => opt.Ignore())
+                .AfterMap((src, dest) =>
+                {
+                    var existingColorIds = dest.BookGenres.Select(pc => pc.GenreId).ToList();
+                    foreach (var gId in src.GenreIds)
+                    {
+                        if (!existingColorIds.Contains(gId))
+                        {
+                            dest.BookGenres.Add(new BookGenre { GenreId = gId });
+                        }
+                    }
+                    dest.BookGenres.RemoveAll(pc => !src.GenreIds.Contains(pc.GenreId));
+                }).ReverseMap();
+
         }
         public static List<Picture> MapPictures(List<IFormFile> formFiles, string imageType)
         {

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStoreAPI.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230919150352_addTables")]
-    partial class addTables
+    [Migration("20230924175740_AddTables")]
+    partial class AddTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -104,9 +104,9 @@ namespace BookStoreAPI.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a793b468-f1e1-499f-a298-b84a5c02dbbc",
+                            Id = "e561c45f-df53-4969-96b8-0fc44437afda",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ce448ee2-61f9-491a-975e-a099368ad760",
+                            ConcurrencyStamp = "d2577df1-7ac4-41f7-94f2-f667cfaa1068",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             FullName = "Admin",
@@ -114,19 +114,19 @@ namespace BookStoreAPI.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAVY1E4uNRgtXBgZa1a+/T9//PWUXBZBvangn3ZYM3ltC9i4XRz5OJzS5QqUGsUVEg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEH/xiIz5z40b/WlL0kC1KIMyrbOX7FOgOH4Wuyo1G10KeqD4M4OQ9PXbn4qDMCIPhg==",
                             PhoneNumber = "+1234567890",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "985e9058-08ed-4039-a378-624a508ce300",
+                            SecurityStamp = "c3e2923d-0583-495d-ae38-58e63c3d1ba8",
                             TwoFactorEnabled = false,
                             UserName = "admin",
                             VerificationRequestId = "ver2"
                         },
                         new
                         {
-                            Id = "3564cc34-a901-4cfd-a68d-d64ff7da1a87",
+                            Id = "3b0341dc-3f7d-45e0-a2c8-352b17e7e360",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d3e84b1c-af66-4ec6-8464-c1c9c6d075d9",
+                            ConcurrencyStamp = "37e1cc5c-3a81-4948-a300-c8595482a8f4",
                             Email = "superadmin@gmail.com",
                             EmailConfirmed = true,
                             FullName = "Super Admin",
@@ -134,19 +134,19 @@ namespace BookStoreAPI.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SUPERADMIN@GMAIL.COM",
                             NormalizedUserName = "SUPERADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEASPsxzKPFPyZm4tK7GXjtF/rlXuvqZIi+5IxTcmW/c/S+8Bi9ymW5fVFqyguelkLA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMekaPXU8BwYmCr3w9NDiCJEVduE3c91hPAV5+Uz0DftzO5xEmo2BU7LPWg0PhTIcA==",
                             PhoneNumber = "+0987654321",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "af70d351-c81e-41d1-b4a4-b3b19e3a4d6b",
+                            SecurityStamp = "145896a2-b51c-466a-95b3-b9ce4b8fb1e3",
                             TwoFactorEnabled = false,
                             UserName = "superadmin",
                             VerificationRequestId = "ver1"
                         },
                         new
                         {
-                            Id = "bc7be8d3-faa2-4447-ac27-89f84bad869f",
+                            Id = "4a8e3791-d0f1-4de9-a1ef-2dfe6e58ec7b",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b6a7dc28-45f4-4cc6-9996-0ded239d26cb",
+                            ConcurrencyStamp = "9ee3db31-7527-4f1d-a5ed-24b7589cad2c",
                             Email = "salesmanager@gmail.com",
                             EmailConfirmed = true,
                             FullName = "Sales Manager",
@@ -154,10 +154,10 @@ namespace BookStoreAPI.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "SALESMANAGER@GMAIL.COM",
                             NormalizedUserName = "SALESMANAGER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMaA/l9fEKigpcTfJk7x4Y8v3IaaCmW2YtCUxRnLWUGBhmVZN4OqkeR3/8oR+cuZgQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPGenlEWVOO6ntwzlmHhokM+zphuOm2BPDF5DYTviFj/vZx9jWhkTaZH6vMubvpXoQ==",
                             PhoneNumber = "+0987654323",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "9866eb3e-4b02-4c47-9541-34bc55135166",
+                            SecurityStamp = "19d3424d-b245-4257-8ca4-403ae6d03d4a",
                             TwoFactorEnabled = false,
                             UserName = "salesmanager",
                             VerificationRequestId = "ver3"
@@ -177,6 +177,10 @@ namespace BookStoreAPI.Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -203,20 +207,20 @@ namespace BookStoreAPI.Persistence.Migrations
                     b.Property<int?>("Discount")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("int")
-                        .HasComputedColumnSql("CAST((([RegularPrice] - [OldPrice]) / [OldPrice]) * 100 AS INT)");
+                        .HasComputedColumnSql("CAST(((COALESCE([RegularPrice], 0) - COALESCE([OldPrice], 0)) / COALESCE(NULLIF([OldPrice], 0), 1)) * 100 AS INT)");
 
                     b.Property<Guid>("LanguageId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("OldPrice")
+                    b.Property<decimal?>("OldPrice")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(18,2)")
-                        .HasDefaultValue(60m);
+                        .HasDefaultValue(0m);
 
                     b.Property<decimal>("RegularPrice")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(18,2)")
-                        .HasDefaultValue(46m);
+                        .HasDefaultValue(0m);
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -498,29 +502,29 @@ namespace BookStoreAPI.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "63183683-a1e1-43bf-93a7-b59454d3983b",
-                            ConcurrencyStamp = "1b093475-6492-4928-a8b7-4779a789661c",
+                            Id = "7072bd60-1935-4262-a12d-b3970049f3c9",
+                            ConcurrencyStamp = "d2b40a3f-a5d7-4b29-9340-b697ad795f32",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "8ccbb4a5-1af0-4c41-940a-30761c343d78",
-                            ConcurrencyStamp = "12ea2d96-cc06-4cb3-9303-389e9912ee6a",
+                            Id = "dacd7fc1-dc01-4d41-bded-8639b4261c2d",
+                            ConcurrencyStamp = "55e00be6-a71b-4e40-bbd8-72b86c043bee",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
-                            Id = "51ec431c-8128-403b-a83b-a2575c083a2c",
-                            ConcurrencyStamp = "57cd79dc-56aa-42bd-b50e-08a674c2fb82",
+                            Id = "498586e3-0fa8-409f-ac1c-54ada49f7748",
+                            ConcurrencyStamp = "3fecb33d-74d7-4943-9e6a-f28723d3668e",
                             Name = "SalesManager",
                             NormalizedName = "SALESMANAGER"
                         },
                         new
                         {
-                            Id = "f62d8845-7fe0-458a-9391-420f3680c9a1",
-                            ConcurrencyStamp = "ab3496b5-30cd-44a0-8943-4593909f0765",
+                            Id = "596d0365-0a7d-4b56-8944-e5e6c73733f5",
+                            ConcurrencyStamp = "7aaacf92-a6d8-42fc-94a3-b1fa30978f0f",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         });
@@ -615,18 +619,18 @@ namespace BookStoreAPI.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "a793b468-f1e1-499f-a298-b84a5c02dbbc",
-                            RoleId = "63183683-a1e1-43bf-93a7-b59454d3983b"
+                            UserId = "e561c45f-df53-4969-96b8-0fc44437afda",
+                            RoleId = "7072bd60-1935-4262-a12d-b3970049f3c9"
                         },
                         new
                         {
-                            UserId = "3564cc34-a901-4cfd-a68d-d64ff7da1a87",
-                            RoleId = "8ccbb4a5-1af0-4c41-940a-30761c343d78"
+                            UserId = "3b0341dc-3f7d-45e0-a2c8-352b17e7e360",
+                            RoleId = "dacd7fc1-dc01-4d41-bded-8639b4261c2d"
                         },
                         new
                         {
-                            UserId = "bc7be8d3-faa2-4447-ac27-89f84bad869f",
-                            RoleId = "51ec431c-8128-403b-a83b-a2575c083a2c"
+                            UserId = "4a8e3791-d0f1-4de9-a1ef-2dfe6e58ec7b",
+                            RoleId = "498586e3-0fa8-409f-ac1c-54ada49f7748"
                         });
                 });
 
