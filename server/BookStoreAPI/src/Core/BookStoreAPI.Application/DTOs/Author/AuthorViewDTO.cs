@@ -11,6 +11,7 @@ namespace BookStoreAPI.Application.DTOs.Author
     {
         public Guid Id { get; set; }
         public string FullName { get; set; }
+        public string ImageUrl { get; set; }
         public List<BookViewDTO>? Books { get; set; }
     }
 }

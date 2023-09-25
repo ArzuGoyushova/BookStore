@@ -40,14 +40,14 @@ namespace BookStore.WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CreateAuthorCommand command)
+        public async Task<IActionResult> Create([FromForm] CreateAuthorCommand command)
         {
             var response = await _mediator.Send(command);
             return Ok(response.Value);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, UpdateAuthorCommand command)
+        public async Task<IActionResult> Update(Guid id, [FromForm] UpdateAuthorCommand command)
         {
             if (id != command.AuthorId)
             {

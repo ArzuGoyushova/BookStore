@@ -1,5 +1,6 @@
 ﻿using BookStoreAPI.Application.DTOs.Genre;
 using FluentValidation;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace BookStoreAPI.Application.DTOs.Author
     public class AuthorCreateOrUpdateDTO
     {
         public string FullName { get; set; }
+        public IFormFile? NewImage { get; set; }
     }
     public class AuthorCreateOrUpdateDtoValidator : AbstractValidator<AuthorCreateOrUpdateDTO>
     {

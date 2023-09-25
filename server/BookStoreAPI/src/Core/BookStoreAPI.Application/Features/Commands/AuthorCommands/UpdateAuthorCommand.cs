@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BookStoreAPI.Application.DTOs.Author;
 using BookStoreAPI.Application.Interfaces.Repository;
+using BookStoreAPI.Application.Profiles;
 using BookStoreAPI.Application.Wrappers;
 using MediatR;
 using System;
@@ -36,7 +37,20 @@ namespace BookStoreAPI.Application.Features.Commands.AuthorCommands
             {
                 return null;
             }
+            if (request.AuthorDTO.NewImage != null)
+            {
+                var uniqueFileName = MapProfile.GetUniqueFileName(request.AuthorDTO.NewImage.FileName);
+                var uniqueFileNameWithExtension = uniqueFileName + Path.GetExtension(request.AuthorDTO.NewImage.FileName);
 
+                existingAuthor.ImageUrl = uniqueFileNameWithExtension;
+
+                string filePath = Path.Combine("C:\\Users\\Администратор\\Desktop\\BookStore\\client\\public\\images\\authors", uniqueFileNameWithExtension);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    request.AuthorDTO.NewImage.CopyTo(stream);
+                }
+            }
             _mapper.Map(request.AuthorDTO, existingAuthor);
 
             await _authorRepository.UpdateAsync(existingAuthor.Id, existingAuthor);
