@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+@font-face {
+    font-family: Trap;
+    src: url(../../src/assets/fonts/Trap-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  header ul li{
+    font-family: Trap;
+  }
