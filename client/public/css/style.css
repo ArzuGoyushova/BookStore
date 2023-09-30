@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -17,4 +19,11 @@
 
   header ul li{
     font-family: Trap;
+  }
+
+  h1, button{
+    font-family: Trap;
+  }
+  p{
+    font-family: 'Urbanist', sans-serif;
   }
