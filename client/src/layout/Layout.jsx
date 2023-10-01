@@ -6,6 +6,7 @@ const Layout = () => {
   return (
     <div>
       <Header/>
+      <hr className="w-full h-0.5 mx-auto bg-gray-500"></hr>
       <main>
         <Home/>
       </main>

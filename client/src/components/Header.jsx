@@ -14,7 +14,7 @@ const Header = () => {
       <div className='flex justify-around items-center'>
       <ul className="list-unstyled flex items-center flex-grow-1 text-gray-500 font-bold text-sm">
         {navLinks.map((link, index) => (
-          <li key={index} className="me-4">
+          <li key={index} className="me-4 cursor-pointer">
             {link.title}
           </li>
         ))}

@@ -24,6 +24,10 @@
   h1, button{
     font-family: Trap;
   }
-  p{
+  p, span{
     font-family: 'Urbanist', sans-serif;
+  }
+
+  .banner{
+    height: 560px;
   }
