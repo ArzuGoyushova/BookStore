@@ -36,6 +36,7 @@ namespace BookStoreAPI.Application.Profiles
             CreateMap<BookDetail, BookDetailViewDTO>().ReverseMap();
 
             CreateMap<BookCreateOrUpdateDTO, Book>()
+                .ForMember(dest=>dest.AuthorId, opt => opt.MapFrom(src=>src.AuthorId))
                 .ForMember(dest => dest.BookGenres, opt => opt.Ignore())
                 .AfterMap((src, dest) =>
                 {

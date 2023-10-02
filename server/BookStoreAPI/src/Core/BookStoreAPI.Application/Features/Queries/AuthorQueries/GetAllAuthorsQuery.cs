@@ -25,7 +25,9 @@ namespace BookStoreAPI.Application.Features.Queries.AuthorQueries
             }
             public async Task<ServiceResponse<List<AuthorViewDTO>>> Handle(GetAllAuthorsQuery request, CancellationToken cancellationToken)
             {
-                var authors = await _authorRepository.GetAllItemsAsync();
+                var authors = await _authorRepository.GetAllItemsWithIncludesAsync(
+                   b => b.Books
+                   );
 
                 var viewModel = _mapper.Map<List<AuthorViewDTO>>(authors);
 

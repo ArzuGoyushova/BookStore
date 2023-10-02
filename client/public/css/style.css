@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
+body{
+  overflow-x: hidden;
+}
 @font-face {
     font-family: Trap;
     src: url(../../src/assets/fonts/Trap-Regular.otf);
@@ -21,7 +22,7 @@
     font-family: Trap;
   }
 
-  h1, button{
+  h1, h2, h3, h4, h5, h6, button{
     font-family: Trap;
   }
   p, span{
@@ -31,3 +32,18 @@
   .banner{
     height: 560px;
   }
+  .ads::after {
+    content: "";
+    background-color: rgb(241, 216, 220);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    width: 200%; 
+    z-index: -1; 
+  }
+  
+  .ads {
+    position: relative;
+  }
+  
