@@ -134,6 +134,32 @@ const firstFourBooks = books.slice(0, 4);
         </div>
         </div>
       </section>
+        <section className='authors w-full my-20'>
+        <div className='flex items-center justify-between'>
+        <h1 className='md:text-4xl lg:text-6xl sm:text-xl font-semibold'>
+           Favorite Authors
+          </h1>
+        <a href="#" className='flex items-center'>
+          <span className='me-2'>view all</span>
+          <BsArrowRight/>
+        </a>
+        </div>
+        <div className=''>
+            <div className='flex items-center justify-between columns-5'>
+            {authors
+            .slice(0, 5)
+            .map((author) => (
+              <div className='text-center'>
+              <img className='rounded-full object-cover w-48 h-48 grayscale' src={`/images/authors/${author.imageUrl}`} />
+              <span className='text-gray-500' key={author.id}>{author.fullName}</span>
+              </div>
+            ))}
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </section>
     </div>
   )
 }
