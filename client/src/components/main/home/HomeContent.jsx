@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
+import { BsArrowLeft, BsArrowRight, BsStarFill } from 'react-icons/bs'
 
 const HomeContent = ({books, authors}) => {
 
@@ -144,14 +144,19 @@ const firstFourBooks = books.slice(0, 4);
           <BsArrowRight/>
         </a>
         </div>
-        <div className=''>
-            <div className='flex items-center justify-between columns-5'>
+        <div className='mt-12'>
+            <div className='flex items-center justify-between'>
             {authors
             .slice(0, 5)
             .map((author) => (
               <div className='text-center'>
-              <img className='rounded-full object-cover w-48 h-48 grayscale' src={`/images/authors/${author.imageUrl}`} />
-              <span className='text-gray-500' key={author.id}>{author.fullName}</span>
+              <img className='rounded-full object-cover w-48 h-48 grayscale mb-5' src={`/images/authors/${author.imageUrl}`} />
+              <span className='font-bold text-xl' key={author.id}>{author.fullName}</span>
+              <div className="flex space-x-2 justify-center my-3">
+      {Array(5).fill().map((_, index) => (
+        <BsStarFill key={index} className='w-4 h-4 text-orange-500' />
+      ))}
+    </div>
               </div>
             ))}
             </div>
