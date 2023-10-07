@@ -156,14 +156,44 @@ const firstFourBooks = books.slice(0, 4);
       {Array(5).fill().map((_, index) => (
         <BsStarFill key={index} className='w-4 h-4 text-orange-500' />
       ))}
-    </div>
-              </div>
+    </div></div>
             ))}
             </div>
             <div>
-
             </div>
           </div>
+        </section>
+        <section className='subscribe w-full my-20'>
+        <div className=''>
+        <h1 className='md:text-4xl lg:text-6xl sm:text-xl font-semibold'>
+           Subscribe to our newsletter
+          </h1>
+        </div>
+        <div className='flex justify-between items-center'>
+        <div className='w-1/2'>
+        <p>Enter your email address to receive regular updates, as well as new on upcoming events and specific offers.</p>
+        </div>
+        <div className='w-1/3'>
+        <form>
+      <div className="flex ">
+        <input
+          id="email"
+          type="email"
+          placeholder="Email"
+          className="border w-2/3"
+          required
+        />
+        <button
+
+          type="submit"
+          className="flex-shrink-0 bg-orange-500 hover:bg-orange-700 text-sm border-4 text-white py-1 px-2 rounded"
+        >
+         Subscribe
+        </button>
+      </div>
+    </form>
+        </div>
+        </div>
         </section>
     </div>
   )
