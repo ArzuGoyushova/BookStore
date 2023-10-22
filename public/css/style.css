@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+  overflow-x: hidden;
+}
+@font-face {
+    font-family: Trap;
+    src: url(../../src/assets/fonts/Trap-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  header ul li{
+    font-family: Trap;
+  }
+
+  h1, h2, h3, h4, h5, h6, button{
+    font-family: Trap;
+  }
+  p, span, footer ul{
+    font-family: 'Urbanist', sans-serif;
+  }
+
+  .banner{
+    height: 560px;
+  }
+  .ads::after {
+    content: "";
+    background-color: rgb(241, 216, 220);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    width: 200%; 
+    z-index: -1; 
+  }
+  
+  .ads {
+    position: relative;
+  }
+  .special-offers::after {
+    content: "";
+    background-color: rgb(241, 216, 220);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    width: 200%; 
+    z-index: -1; 
+  }
+  
+  .special-offers {
+    position: relative;
+  }
