@@ -15,7 +15,7 @@ always free from repetition, injected humour, or non-characteristic words etc.
 </p>
 <button className='flex justify-center items-center border px-5 py-2 bg-orange-600 text-white'>
             Buy Now <BsArrowRight className='mx-4' />
-          </button><button></button>
+          </button>
    </div>
 </div>
   )
