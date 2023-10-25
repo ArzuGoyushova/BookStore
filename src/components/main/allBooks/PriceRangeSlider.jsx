@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import {PiArrowsHorizontalLight} from 'react-icons/pi';
 
 const PriceRangeSlider = () => {
-  const [sliderValue, setSliderValue] = useState([25, 75]);
+  const [sliderValue, setSliderValue] = useState([50, 450]);
 
   const handleSliderChange = (values) => {
     setSliderValue(values);
@@ -18,8 +19,10 @@ const PriceRangeSlider = () => {
         defaultValue={sliderValue}
         onChange={handleSliderChange}
       />
-      <div className="text-center">
-        Price Range: ${sliderValue[0]} - ${sliderValue[1]}
+      <div className="my-3 flex items-center space-x-2">
+      <span className='px-3 py-2 bg-gray-200 text-sm'>${sliderValue[0]}</span>
+      <PiArrowsHorizontalLight/>
+      <span className='px-3 py-2 bg-gray-200 text-sm'>${sliderValue[1]}</span>
       </div>
     </div>
   );

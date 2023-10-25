@@ -111,3 +111,54 @@ export const socials = [
         imageUrl: "social4.png",
     },
 ];
+
+export const allBooksCategories = [
+    {
+        id: "1",
+        name: "Detective",
+    },
+    {
+        id: "2",
+        name: "Science-Fiction",
+    },
+    {
+        id: "3",
+        name: "Stroies",
+    },
+    {
+        id: "4",
+        name: "Tales",
+    },
+    {
+        id: "5",
+        name: "Classics",
+    },
+    {
+        id: "6",
+        name: "Adventure",
+    },
+    {
+        id: "7",
+        name: "Poems",
+    },
+    {
+        id: "8",
+        name: "Horror novels",
+    },
+    {
+        id: "9",
+        name: "Motivational",
+    },
+    {
+        id: "10",
+        name: "Psychological",
+    },
+    {
+        id: "11",
+        name: "Phylosophical",
+    },
+    {
+        id: "12",
+        name: "Educational",
+    },
+];
