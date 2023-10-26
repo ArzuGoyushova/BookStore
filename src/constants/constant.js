@@ -162,3 +162,104 @@ export const allBooksCategories = [
         name: "Educational",
     },
 ];
+
+export const authorsCategories = [
+    {
+        id: "1",
+        name: "Agatha Christie",
+    },
+    {
+        id: "2",
+        name: "Alexander Depp",
+    },
+    {
+        id: "3",
+        name: "Ali Atay",
+    },
+    {
+        id: "4",
+        name: "Chuck Bass",
+    },
+    {
+        id: "5",
+        name: "Franz Kafka",
+    },
+    {
+        id: "6",
+        name: "Frederik Backman",
+    },
+    {
+        id: "7",
+        name: "Klaus Klemp",
+    },
+    {
+        id: "8",
+        name: "Kory Stamper",
+    },
+    {
+        id: "9",
+        name: "Lawrence Block",
+    },
+    {
+        id: "10",
+        name: "Max Egremont",
+    },
+    {
+        id: "11",
+        name: "Magdalena Droste",
+    },
+    {
+        id: "12",
+        name: "Matthew Olshan",
+    },
+    {
+        id: "13",
+        name: "Michael Arthur",
+    },
+    {
+        id: "14",
+        name: "Nathanel Rich",
+    },
+    {
+        id: "15",
+        name: "Nick Donald",
+    },
+    {
+        id: "16",
+        name: "Rizvan Bagirli",
+    },
+    {
+        id: "17",
+        name: "Yoko",
+    },
+];
+
+export const agesCategories = [
+    {
+        id: "1",
+        name: "Young Adults",
+    },
+    {
+        id: "2",
+        name: "Adults",
+    },
+    {
+        id: "3",
+        name: "Children",
+    },
+];
+
+export const languagesCategories = [
+    {
+        id: "1",
+        name: "English",
+    },
+    {
+        id: "2",
+        name: "Azerbaijanian",
+    },
+    {
+        id: "3",
+        name: "Turkish",
+    },
+];

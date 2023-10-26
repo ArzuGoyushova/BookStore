@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
-import { allBooksCategories } from '../../../constants/constant'
+import { languagesCategories } from '../../../constants/constant';
 
-const AllBooksCategories = () => {
-  
+const Languages = () => {
     const [selectedCategories, setSelectedCategories] = useState([]);
 
     const toggleCategorySelection = (category) => {
@@ -16,8 +15,8 @@ const AllBooksCategories = () => {
     };
 
   return (
-    <div className="allBooksCategories h-64 overflow-y-auto space-y-2 scrollbar">
-      {allBooksCategories.map((category) => (
+    <div className="languagesCategories space-y-2">
+      {languagesCategories.map((category) => (
         <div key={category.id} className="flex items-center">
           <input
             type="checkbox"
@@ -33,4 +32,4 @@ const AllBooksCategories = () => {
   )
 }
 
-export default AllBooksCategories
+export default Languages
