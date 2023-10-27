@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import { authorsCategories } from '../../../constants/constant';
 import SearchBox from './SearchBox';
 
-const Authors = () => {
+const Authors = ({ addFilter, removeFilter }) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
 
   const toggleCategorySelection = (category) => {
-    setSelectedCategories((prevSelected) => {
-      if (prevSelected.includes(category)) {
-        return prevSelected.filter((c) => c !== category);
-      } else {
-        return [...prevSelected, category];
-      }
-    });
+    if (selectedCategories.includes(category)) {
+      setSelectedCategories((prevSelected) => prevSelected.filter((c) => c !== category));
+      removeFilter(category); 
+    } else {
+      setSelectedCategories((prevSelected) => [...prevSelected, category]);
+      addFilter(category);
+    }
   };
 
   const filteredCategories = authorsCategories.filter((category) =>
@@ -30,7 +30,9 @@ const Authors = () => {
               type="checkbox"
               id={category.id}
               checked={selectedCategories.includes(category)}
-              onChange={() => toggleCategorySelection(category)}
+              onChange={() => {
+                toggleCategorySelection(category);
+              }}
               className="mr-4 w-4 h-4 accent-orange-600"
             />
             <label htmlFor={category.id}>

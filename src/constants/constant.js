@@ -263,3 +263,58 @@ export const languagesCategories = [
         name: "Turkish",
     },
 ];
+
+export const tags = [
+    {
+        id: "1",
+        name: "Popular",
+    },
+    {
+        id: "2",
+        name: "Azerbaijanian",
+    },
+    {
+        id: "3",
+        name: "Turkish",
+    },
+];
+
+export const books = [
+    {
+        id: "1",
+        title: "Madam Bovary",
+        imageUrl: "MadamBovary1.png",
+        oldPrice: 0,
+        regularPrice: 10,
+        discount: 0,
+        author: "Gustave Flaubert"
+    },
+    {
+        id: "2",
+        title: "Book of ideas",
+        imageUrl: "Eyebeam1.png",
+        oldPrice: 18,
+        regularPrice: 16.20,
+        discount: 10,
+        author: "Michael Arthur"
+    },
+    {
+        id: "3",
+        title: "The Dog",
+        imageUrl: "DOG1.png",
+        oldPrice: 0,
+        regularPrice: 12,
+        discount: 0,
+        author: "Jack Living"
+    },
+    {
+        id: "4",
+        title: "Woman Life Story",
+        imageUrl: "WomanLifeStory1.png",
+        oldPrice: 0,
+        regularPrice: 15.95,
+        discount: 0,
+        author: "Michael Arthur"
+    },
+
+];
