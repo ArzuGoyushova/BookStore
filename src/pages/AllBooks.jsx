@@ -29,7 +29,7 @@ const AllBooks = () => {
       <section className='w-1/3'>
         <Sidebar addFilter={addFilter} removeFilter={removeFilter}  clearAllFilters={clearAllFilters}/>
       </section>
-      <section className='w-2/3 border h-100'>
+      <section className='w-2/3'>
           <Content
             selectedFilters={selectedFilters}
             removeFilter={removeFilter}
