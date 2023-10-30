@@ -4,12 +4,17 @@ import { BsChevronDown } from 'react-icons/bs';
 import { books } from '../../../constants/constant';
 import BookCard from './BookCard';
 import Pagination from './Pagination';
+import { Link } from 'react-router-dom';
 
 const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageCount, setPageCount] = useState();
   const itemsPerPage = 12;
+  const [selectedBook, setSelectedBook] = useState(null);
 
+  const handleBookClick = (book) => {
+    setSelectedBook(book);
+  };
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -54,10 +59,14 @@ const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
           </button>
         </div>
       </div>
+    
       <div className="flex flex-wrap -mx-2">
         {paginatedBooks.map((book) => (
           <div key={book.id} className="w-full sm:w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-            <BookCard book={book} />
+            <Link to={`/book-detail/${book.id}`}>
+            <BookCard book={book} onBookClick={handleBookClick} />
+            </Link>
+           
           </div>
         ))}
       </div>
