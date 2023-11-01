@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BsBookmark, BsBag } from 'react-icons/bs';
+import AddToBag from '../AddToBag';
 
 const BookCard = ({ book, onBookClick }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -8,6 +9,7 @@ const BookCard = ({ book, onBookClick }) => {
     onBookClick(book);
   };
 
+  
   return (
     <div
       onClick={handleBookClick}
@@ -45,12 +47,7 @@ const BookCard = ({ book, onBookClick }) => {
       </div>
       {isHovered && (
         <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <button
-            className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-2 text-sm flex"
-          >
-            Add to Bag
-            <BsBag className="ms-2" />
-          </button>
+            <AddToBag book={book} />
         </div>
       )}
     </div>
