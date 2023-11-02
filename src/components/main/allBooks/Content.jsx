@@ -5,12 +5,30 @@ import { books } from '../../../constants/constant';
 import BookCard from './BookCard';
 import Pagination from './Pagination';
 import { Link } from 'react-router-dom';
+import ShoppingCart from '../basket/ShoppingCart';
 
 const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageCount, setPageCount] = useState();
   const itemsPerPage = 12;
   const [selectedBook, setSelectedBook] = useState(null);
+
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (book) => {
+    const newCart = [...cart];
+    const existingBookIndex = newCart.findIndex((item) => item.id === book.id);
+
+    if (existingBookIndex !== -1) {
+      newCart[existingBookIndex].quantity += 1;
+    } else {
+      newCart.push({ ...book, quantity: 1 });
+    }
+
+    setCart(newCart);
+
+    localStorage.setItem('cart', JSON.stringify(newCart));
+  };
 
   const handleBookClick = (book) => {
     setSelectedBook(book);
@@ -64,12 +82,13 @@ const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
         {paginatedBooks.map((book) => (
           <div key={book.id} className="w-full sm:w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
             <Link to={`/book-detail/${book.id}`}>
-            <BookCard book={book} onBookClick={handleBookClick} />
+            <BookCard book={book} onBookClick={handleBookClick} addToCart={addToCart} />
             </Link>
            
           </div>
         ))}
       </div>
+      <ShoppingCart cart={cart} />
       <Pagination pageCount={pageCount} currentPage={currentPage} onPageChange={handlePageChange} />
     </>
   );

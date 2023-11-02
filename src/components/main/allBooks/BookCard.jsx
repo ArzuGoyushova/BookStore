@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { BsBookmark, BsBag } from 'react-icons/bs';
 import AddToBag from '../AddToBag';
+import ShoppingCart from '../basket/ShoppingCart';
 
-const BookCard = ({ book, onBookClick }) => {
+const BookCard =  ({ book, onBookClick, addToCart }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleBookClick = () => {
@@ -47,9 +48,10 @@ const BookCard = ({ book, onBookClick }) => {
       </div>
       {isHovered && (
         <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <AddToBag book={book} />
+          <AddToBag book={book} addToCart={addToCart} /> {/* Pass addToCart prop to AddToBag component */}
         </div>
       )}
+
     </div>
   );
 };

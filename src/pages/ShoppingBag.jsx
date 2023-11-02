@@ -1,4 +1,5 @@
 import React from 'react'
+import ShoppingCart from '../components/main/basket/ShoppingCart'
 
 const ShoppingBag = () => {
   return (
@@ -7,6 +8,9 @@ const ShoppingBag = () => {
         <Link className='' to='/home'>Home</Link>
         <span className='font-bold'> / Shopping Bag</span>
     </div>
+    <div>
+      <ShoppingCart/>
+      </div>
     </div>
   )
 }
