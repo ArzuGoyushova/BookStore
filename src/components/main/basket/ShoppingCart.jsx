@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const ShoppingCart = ({cart}) => {
+const ShoppingCart = () => {
+  const [cart, setCart] = useState([]);
+  
   const removeFromCart = (bookId) => {
     const newCart = cart.filter((item) => item.id !== bookId);
     setCart(newCart);

@@ -1,5 +1,6 @@
 import React from 'react'
 import ShoppingCart from '../components/main/basket/ShoppingCart'
+import { Link } from 'react-router-dom'
 
 const ShoppingBag = () => {
   return (
