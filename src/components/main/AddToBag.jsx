@@ -7,16 +7,14 @@ const AddToBag = ({ book, addToCart }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg p-4">
-      <div className="flex justify-between">
+      <div className="">
         <button
-          className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-4"
+          className="bg-orange-600 hover:bg-orange-700 text-white text-sm py-2 px-2 flex justify-center items-center"
           onClick={handleAddToCart}
         >
-          Add to Bag <BsBag className="ml-2" />
+          Add to Bag <BsBag className="ms-2 mb-1 w-3 h-3" />
         </button>
       </div>
-    </div>
   );
 };
 
