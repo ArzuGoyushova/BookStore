@@ -4,6 +4,7 @@ import AllBooks from "./pages/AllBooks";
 import Home from "./pages/Home";
 import BookDetail from "./pages/BookDetail";
 import ShoppingBag from "./pages/ShoppingBag";
+import Checkout from "./pages/Checkout";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="all-books" element={<AllBooks />} />
           <Route path="book-detail/:bookId" element={<BookDetail/>} />
           <Route path="basket" element={<ShoppingBag/>} />
+          <Route path="checkout" element={<Checkout/>} />
         </Route>
       </Routes>
     </>

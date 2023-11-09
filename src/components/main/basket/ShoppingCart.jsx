@@ -45,7 +45,7 @@ const ShoppingCart = () => {
     <>
       <div className="">
         {cart.map((item) => (
-          <div key={item.id} className="flex justify-between items-center mt-4 border-t-2">
+          <div key={item.id} className="flex justify-between items-center my-4 border-t-2">
             <div className='w-1/5 mt-4'>
               <img className='w-60 h-40 object-contain bg-gray-100' src={`./images/books/${item.imageUrl}`} />
             </div>
