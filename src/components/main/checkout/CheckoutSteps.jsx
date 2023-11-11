@@ -27,17 +27,17 @@ const CheckoutSteps = () => {
           <span>Payment</span>
         </div>
         <div className='flex justify-between'>
-          <span className={`border ${step >= 1 ? 'border-orange-500 bg-orange-500' : 'border-gray-500'} px-4 py-2`}>
-            {step > 1 ? <FaCheck /> : '1'}
-          </span>
-          <div className={`border ${step >= 2 ? 'border-orange-500 bg-orange-500' : 'border-gray-500'} px-4 py-2`} />
-          <span className={`border ${step >= 2 ? 'border-orange-500 bg-orange-500' : 'border-gray-500'} px-4 py-2`}>
-            {step > 2 ? <FaCheck /> : '2'}
-          </span>
-          <div className='border-gray-500 px-4 py-2' />
-          <span className={`border ${step >= 3 ? 'border-orange-500 bg-orange-500' : 'border-gray-500'} px-4 py-2`}>
-            {step > 3 ? <FaCheck /> : '3'}
-          </span>
+        <span className={`border ${step >= 1 ? 'border-orange-500 bg-orange-500' : 'border-gray-500'} px-4 py-2`}>
+    {step > 1 ? <FaCheck /> : '1'}
+  </span>
+  <span className={`line ${step >= 2 ? 'line-orange' : 'line-gray'}`} />
+  <span className={`border ${step >= 2 ? 'border-orange-500 bg-orange-500' : 'border-gray-500'} px-4 py-2`}>
+    {step > 2 ? <FaCheck /> : '2'}
+  </span>
+  <span className={`line ${step >= 3 ? 'line-orange' : 'line-gray'}`} />
+  <span className={`border ${step >= 3 ? 'border-orange-500 bg-orange-500' : 'border-gray-500'} px-4 py-2`}>
+    {step > 3 ? <FaCheck /> : '3'}
+  </span>
         </div>
         <div className='my-4'>
           {step === 1 && (
