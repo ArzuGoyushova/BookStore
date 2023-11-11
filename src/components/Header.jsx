@@ -3,7 +3,7 @@ import { navLinks } from '../constants/constant';
 import {LiaShoppingBagSolid} from 'react-icons/lia';
 import {BiUser} from 'react-icons/bi';
 import {FiSearch, FiBookmark} from 'react-icons/fi';
-
+import { Link } from 'react-router-dom';
 const Header = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
 
@@ -38,7 +38,9 @@ const Header = () => {
           <FiBookmark className='w-5 h-5 text-gray-500'/>
           </li>
           <li className="me-5 relative">
+            <Link to="/basket"> 
               <LiaShoppingBagSolid className='w-5 h-5 text-gray-500'/>
+              </Link>
               {cartQuantity > 0 && (
                 <div className="absolute top-3 right-0 bg-red-500 text-white rounded-full w-3 h-3 text-[8px] flex items-center justify-center">
                   {cartQuantity}
