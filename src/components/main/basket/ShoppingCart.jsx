@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BiX } from 'react-icons/bi';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeFromCartAction, updateQuantityAction } from '../../../redux/slices/cartSlice';
 
 const ShoppingCart = () => {
-  const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
+  const cart = useSelector((state) => state.cart.cartItems);
+  const dispatch = useDispatch();
 
   const updateTotal = () => {
     let totalPrice = 0;
@@ -14,28 +17,12 @@ const ShoppingCart = () => {
   };
 
   const removeFromCart = (bookId) => {
-    const newCart = cart.filter((item) => item.id !== bookId);
-    setCart(newCart);
-    localStorage.setItem('cart', JSON.stringify(newCart));
+    dispatch(removeFromCartAction(bookId));
   };
 
   const updateQuantity = (bookId, newQuantity) => {
-    const updatedCart = cart.map((item) => {
-      if (item.id === bookId) {
-        return { ...item, quantity: newQuantity };
-      }
-      return item;
-    });
-    setCart(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    dispatch(updateQuantityAction({ id: bookId, quantity: newQuantity })); 
   };
-
-  useEffect(() => {
-    const storedCart = localStorage.getItem('cart');
-    if (storedCart) {
-      setCart(JSON.parse(storedCart));
-    }
-  }, []);
 
   useEffect(() => {
     updateTotal();

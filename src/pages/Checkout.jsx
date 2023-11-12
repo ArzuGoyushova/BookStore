@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CheckoutShoppingBag from '../components/main/checkout/CheckoutShoppingBag'
 import CheckoutSteps from '../components/main/checkout/CheckoutSteps'
 
 const Checkout = () => {
@@ -14,7 +15,7 @@ const Checkout = () => {
             </div>
             <div className='flex justify-between'>
       <div className='w-1/2'><CheckoutSteps/></div>
-      <div>2</div>
+      <div className='w-1/2'><CheckoutShoppingBag/></div>
       </div>
     </div>
   )

@@ -2,26 +2,32 @@ export const navLinks = [
     {
         id: "categories",
         title: "Categories",
+        link: "/all-books"
     },
     {
         id: "bestsellers",
         title: "Bestsellers",
+        link: "/all-books"
     },
     {
         id: "newReleases",
         title: "New Releases",
+        link: "/all-books"
     },
     {
         id: "sale",
         title: "Sales",
+        link: "/all-books"
     },
     {
         id: "bookSets",
         title: "Book Sets",
+        link: "/all-books"
     },
     {
         id: "other",
         title: "Other",
+        link: "/all-books"
     },
 ];
 

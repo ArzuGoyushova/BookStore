@@ -21,22 +21,22 @@ const CheckoutSteps = () => {
   return (
     <div className='w-full'>
       <div>
-        <div className='flex justify-between'>
-          <span>Information</span>
-          <span>Delivery</span>
-          <span>Payment</span>
+        <div className='flex justify-between mb-1'>
+          <span className='font-bold text-lg'>Information</span>
+          <span className='font-bold text-lg'>Delivery</span>
+          <span className='font-bold text-lg'>Payment</span>
         </div>
         <div className='flex justify-between'>
-        <span className={`border ${step >= 1 ? 'border-orange-500 bg-orange-500' : 'border-gray-500'} px-4 py-2`}>
-    {step > 1 ? <FaCheck /> : '1'}
+        <span className={`border ${step >= 1 ? 'text-white border-orange-500 bg-orange-500' : 'border-gray-500'} text-sm px-2.5 py-1`}>
+    {step > 1 ? <FaCheck className='w-2.5 mt-1'/> : '1'}
+  </span>
+  <span className={`line line-orange`} />
+  <span className={`border ${step >= 2 ? 'text-white border-orange-500 bg-orange-500' : 'border-gray-500'} text-sm px-2.5 py-1`}>
+    {step > 2 ? <FaCheck className='w-2.5 mt-1'/> : '2'}
   </span>
   <span className={`line ${step >= 2 ? 'line-orange' : 'line-gray'}`} />
-  <span className={`border ${step >= 2 ? 'border-orange-500 bg-orange-500' : 'border-gray-500'} px-4 py-2`}>
-    {step > 2 ? <FaCheck /> : '2'}
-  </span>
-  <span className={`line ${step >= 3 ? 'line-orange' : 'line-gray'}`} />
-  <span className={`border ${step >= 3 ? 'border-orange-500 bg-orange-500' : 'border-gray-500'} px-4 py-2`}>
-    {step > 3 ? <FaCheck /> : '3'}
+  <span className={`border ${step >= 3 ? 'text-white border-orange-500 bg-orange-500' : 'border-gray-500'} text-sm px-2.5 py-1`}>
+    {step > 3 ? <FaCheck className='w-2.5 mt-1'/> : '3'}
   </span>
         </div>
         <div className='my-4'>
@@ -86,7 +86,7 @@ const CheckoutSteps = () => {
               className='border border-gray-400 p-2'
             />
 <br/>
-            <button className='border border-gray-700 p-2 font-bold' type="button" onClick={handleNextStep}>
+            <button className='border border-gray-700 p-2 font-bold hover:bg-orange-500 hover:text-white hover:border-orange-500' type="button" onClick={handleNextStep}>
               Next Step
             </button>
           </form>
@@ -139,14 +139,13 @@ const CheckoutSteps = () => {
           
             <br />
           
-            <button className='border border-gray-700 p-2 font-bold' type="button" onClick={handleNextStep}>
+            <button className='border border-gray-700 p-2 font-bold hover:bg-orange-500 hover:text-white hover:border-orange-500' type="button" onClick={handleNextStep}>
               Next Step
             </button>
           </form>
           
           )}
           {step === 3 && (
-            // Form for Payment Information
             <form className='flex flex-col space-y-2'>
             <label className='font-bold' htmlFor="paymentMethod">Payment Method</label>
             <input
@@ -158,18 +157,56 @@ const CheckoutSteps = () => {
               onChange={handleChange}
               className='border border-gray-400 p-2'
             />
-          
+          <div className='grid grid-cols-2 gap-3'>
+            <div className='flex flex-col'>
             <label className='font-bold' htmlFor="cardInfo">Card Info</label>
             <input
               type="text"
               id="cardInfo"
               name="cardInfo"
-              placeholder="Card Info*"
+              placeholder="Number*"
               value={formData.cardInfo}
               onChange={handleChange}
               className='border border-gray-400 p-2'
             />
-          
+            </div>
+            <div className='flex flex-col'>
+             <label className='font-bold' htmlFor="expirationDate">Expiration Date</label>
+            <input
+              type="text"
+              id="expirationDate"
+              name="expirationDate"
+              placeholder="MM/YY*"
+              value={formData.expirationDate}
+              onChange={handleChange}
+              className='border border-gray-400 p-2'
+            />
+            </div>
+            <div className='flex flex-col'>
+             <label className='font-bold' htmlFor="nameOnCard">Name on Card</label>
+            <input
+              type="text"
+              id="nameOnCard"
+              name="nameOnCard"
+              placeholder="Name*"
+              value={formData.nameOnCard}
+              onChange={handleChange}
+              className='border border-gray-400 p-2'
+            />
+            </div>
+            <div className='flex flex-col'>
+             <label className='font-bold' htmlFor="securityCode">Security Code</label>
+            <input
+              type="text"
+              id="securityCode"
+              name="securityCode"
+              placeholder="CVV / CVC*"
+              value={formData.securityCode}
+              onChange={handleChange}
+              className='border border-gray-400 p-2'
+            />
+            </div>
+          </div>
             <label className='font-bold'>
               <input
                 type="checkbox"
@@ -184,7 +221,7 @@ const CheckoutSteps = () => {
           
             <br />
           
-            <button className='border border-gray-700 p-2 font-bold' type="button" onClick={handleNextStep}>
+            <button className='border border-gray-700 p-2 font-bold hover:bg-orange-500 hover:text-white hover:border-orange-500' type="button" onClick={handleNextStep}>
               Pay and Place Order
             </button>
           </form>

@@ -12,7 +12,7 @@ const SearchBox = ({ setSearchQuery }) => {
         type="text"
         placeholder="Author Name"
         className="outline-none w-full text-sm"
-        onChange={handleInputChange} // Call the function when input changes
+        onChange={handleInputChange}
       />
       <div className="text-gray-500">
         <FaSearch />

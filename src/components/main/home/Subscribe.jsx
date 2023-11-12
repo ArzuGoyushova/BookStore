@@ -23,7 +23,6 @@ const Subscribe = () => {
           required
         />
         <button
-
           type="submit"
           className="flex-shrink-0 bg-orange-500 hover:bg-orange-700 text-sm text-white py-3 px-8"
         >

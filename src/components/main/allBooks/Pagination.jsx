@@ -62,7 +62,7 @@ const Pagination = ({ pageCount, currentPage, onPageChange }) => {
                 currentPage === 1 ? 'bg-gray-200 hover:bg-white' : 'bg-orange-600'
               }`}
             >
-              <BsChevronLeft className="h-4 w-4 text-gray-800" aria-hidden="true" />
+            <BsChevronLeft className="h-4 w-4 text-gray-800" aria-hidden="true" />
             </button>
             <button
               onClick={() => onPageChange(currentPage + 1)}
@@ -71,7 +71,7 @@ const Pagination = ({ pageCount, currentPage, onPageChange }) => {
                 currentPage === pageCount ? 'bg-gray-200  hover:bg-white' : ' bg-orange-600'
               }`}
             >
-              <BsChevronRight className="h-4 w-4" aria-hidden="true" />
+            <BsChevronRight className="h-4 w-4" aria-hidden="true" />
             </button>
           </nav>
         </div>

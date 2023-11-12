@@ -5,30 +5,20 @@ import { books } from '../../../constants/constant';
 import BookCard from './BookCard';
 import Pagination from './Pagination';
 import { Link } from 'react-router-dom';
-import ShoppingCart from '../basket/ShoppingCart';
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCartAction } from '../../../redux/slices/cartSlice';
 
 const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageCount, setPageCount] = useState();
   const itemsPerPage = 12;
   const [selectedBook, setSelectedBook] = useState(null);
-
-  const [cart, setCart] = useState([]);
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
 
   const addToCart = (book) => {
-    const newCart = [...cart];
-    const existingBookIndex = newCart.findIndex((item) => item.id === book.id);
-
-    if (existingBookIndex !== -1) {
-      newCart[existingBookIndex].quantity += 1;
-    } else {
-      newCart.push({ ...book, quantity: 1 });
-    }
-
-    setCart(newCart);
-
-    localStorage.setItem('cart', JSON.stringify(newCart));
-  };
+    dispatch(addToCartAction(book)); 
+  }; 
 
   const handleBookClick = (book) => {
     setSelectedBook(book);
@@ -88,7 +78,6 @@ const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
           </div>
         ))}
       </div>
-      <ShoppingCart cart={cart} />
       <Pagination pageCount={pageCount} currentPage={currentPage} onPageChange={handlePageChange} />
     </>
   );
