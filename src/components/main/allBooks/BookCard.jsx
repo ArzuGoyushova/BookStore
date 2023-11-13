@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BsBookmark, BsBag } from 'react-icons/bs';
 import AddToBag from '../AddToBag';
+import { Link } from 'react-router-dom';
 
 const BookCard =  ({ book, onBookClick, addToCart }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -8,7 +9,6 @@ const BookCard =  ({ book, onBookClick, addToCart }) => {
   const handleBookClick = () => {
     onBookClick(book);
   };
-
   
   return (
     <div
@@ -32,9 +32,11 @@ const BookCard =  ({ book, onBookClick, addToCart }) => {
         )}
       </div>
       <div className="px-6 py-4">
+      <Link to={`/book-detail/${book.id}`}>
         <div className="font-semibold text-lg mb-1" onClick={handleBookClick}>
           {book.title}
         </div>
+        </Link>
         <p className="text-gray-700">{book.author}</p>
         <div className="mt-1 flex">
           {book.oldPrice > 0 && (
@@ -45,12 +47,13 @@ const BookCard =  ({ book, onBookClick, addToCart }) => {
           )}
         </div>
       </div>
-      {isHovered && (
-        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <AddToBag book={book} addToCart={addToCart} />
-        </div>
-      )}
-
+      {isHovered ? (
+          <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+           
+              <AddToBag book={book} addToCart={addToCart} />
+           
+          </div>
+        ) : null}
     </div>
   );
 };

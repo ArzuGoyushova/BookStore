@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import AddToBag from '../AddToBag';
 
-const Detail = ({book}) => {
+const Detail = ({ book, addToCart }) => {
     const [count, setCount] = useState(1);
-
+  
     const renderStars = (count) => {
         const stars = [];
         for (let i = 0; i < count; i++) {
@@ -14,6 +15,8 @@ const Detail = ({book}) => {
         }
         return stars;
     };
+
+    
   return (
     <div>
         {book ? (
@@ -53,11 +56,11 @@ const Detail = ({book}) => {
                                 <button className='ms-2 px-3 py-4 hover:bg-gray-400' onClick={() => setCount(count + 1)}>+</button>
                             </div>
                             <div>
-                                <button
-                                    className="bg-orange-600 hover:bg-orange-700 text-white py-4 px-16 text-m flex"
-                                >
-                                    Add to Bag
-                                </button>
+          <div>
+          
+                  <AddToBag book={book} addToCart={addToCart}  />
+               
+          </div>
                             </div>
                             <div>
                                 <button

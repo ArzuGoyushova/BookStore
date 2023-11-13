@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BiX } from 'react-icons/bi';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { removeFromCartAction, updateQuantityAction } from '../../../redux/slices/cartSlice';
 
 const ShoppingCart = () => {
@@ -84,12 +85,12 @@ const ShoppingCart = () => {
             <span className='font-bold text-gray-800'>${(10 + total).toFixed(2)}</span>
           </div>
         </div>
-        <button
+        <Link to="/checkout"
           className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-12 mt-2 mb-5 text-m flex items-center "
         >
           <span className='me-2'>Checkout</span>
           <img src='../images/arrow-icon.png' />
-        </button>
+        </Link>
         </div>
       </div>
     </>

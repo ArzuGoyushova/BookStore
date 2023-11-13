@@ -71,9 +71,9 @@ const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
       <div className="flex flex-wrap -mx-2">
         {paginatedBooks.map((book) => (
           <div key={book.id} className="w-full sm:w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-            <Link to={`/book-detail/${book.id}`}>
+        
             <BookCard book={book} onBookClick={handleBookClick} addToCart={addToCart} />
-            </Link>
+          
            
           </div>
         ))}
