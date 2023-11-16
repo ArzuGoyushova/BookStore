@@ -53,28 +53,6 @@ export const cartSlice = createSlice({
       const totalQuantity = state.cartItems.reduce((total, item) => total + item.quantity, 0);
       state.cartQuantity = totalQuantity;
     },
-  },
-  name: 'bookmarks',
-  initialState: {
-    bookmarkedItems: [],
-    bookmarkedQuantity: 0
-  },
-  reducers: {
-    addToBookmarkedAction: (state, action) => {
-      const { id, title, imageUrl, author, regularPrice, quantity = 1 } = action.payload;
-      const existingItem = state.bookmarkedItems.find(item => item.id === id);
-
-      if (existingItem) {
-        existingItem.quantity += quantity;
-      } else {
-        state.bookmarkedItems.push({ id, title, imageUrl, author, regularPrice, quantity });
-      }
-
-      localStorage.setItem('bookmarks', JSON.stringify(state.bookmarkedItems));
-
-      const totalQuantity = state.bookmarkedItems.reduce((total, item) => total + item.quantity, 0);
-      state.bookmarkedQuantity = totalQuantity;
-    },
   }
 });
 
