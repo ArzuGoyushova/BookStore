@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { BsBookmark, BsBag } from 'react-icons/bs';
 import AddToBag from '../AddToBag';
 import { Link } from 'react-router-dom';
+import AddToBookmark from '../AddToBookmark';
 
-const BookCard =  ({ book, onBookClick, addToCart }) => {
+const BookCard =  ({ book, onBookClick, addToCart, addToBookmark }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleBookClick = () => {
@@ -22,8 +23,8 @@ const BookCard =  ({ book, onBookClick, addToCart }) => {
         {isHovered && (
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
         )}
-        <button className="absolute top-0 right-0 m-2 p-2 text-gray-800">
-          <BsBookmark />
+        <button className="absolute top-0 right-0 m-2 p-2 text-gray-800" >
+          <AddToBookmark book={book} addToBookmark={addToBookmark}/>
         </button>
         {book.discount > 0 && (
           <div className="absolute top-0 left-0 m-2 px-2 py-1 bg-orange-600 text-white">

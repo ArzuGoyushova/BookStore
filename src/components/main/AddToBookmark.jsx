@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { BsBookmark, BsCheck } from 'react-icons/bs';
 
-const AddToBookmarked = ({ book, addToBookmarked }) => {
+const AddToBookmark = ({ book, addToBookmark }) => {
   const [addedToBookmarked, setAddedToBookmarked] = useState(false);
 
   const handleAddToBookmarked = () => {
-    addToBookmarked(book);
+    addToBookmark(book);
     setAddedToBookmarked(true);
     setTimeout(() => {
       setAddedToBookmarked(false);
@@ -32,4 +32,4 @@ const AddToBookmarked = ({ book, addToBookmarked }) => {
   );
 };
 
-export default AddToBookmarked;
+export default AddToBookmark;

@@ -4,9 +4,10 @@ import { BsChevronDown } from 'react-icons/bs';
 import { books } from '../../../constants/constant';
 import BookCard from './BookCard';
 import Pagination from './Pagination';
-import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCartAction } from '../../../redux/slices/cartSlice';
+import { addToBookmarkAction } from '../../../redux/slices/bookmarkSlice';
+
 
 const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,11 +16,14 @@ const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
   const [selectedBook, setSelectedBook] = useState(null);
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
+  const bookmark = useSelector((state) => state.bookmark);
 
   const addToCart = (book) => {
     dispatch(addToCartAction(book)); 
   }; 
-
+  const addToBookmark = (book) => {
+    dispatch(addToBookmarkAction(book)); 
+  }; 
   const handleBookClick = (book) => {
     setSelectedBook(book);
   };
@@ -71,7 +75,7 @@ const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
       <div className="flex flex-wrap -mx-2">
         {paginatedBooks.map((book) => (
           <div key={book.id} className="w-full sm:w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-            <BookCard book={book} onBookClick={handleBookClick} addToCart={addToCart} />
+            <BookCard book={book} onBookClick={handleBookClick} addToCart={addToCart} addToBookmark={addToBookmark} />
           </div>
         ))}
       </div>
