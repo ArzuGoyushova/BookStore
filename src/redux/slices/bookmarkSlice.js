@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
+const storedBookmark = JSON.parse(localStorage.getItem('bookmark'));
 
 export const bookmarkSlice = createSlice({
   name: 'bookmark',
   initialState: {
-    bookmarkItems: [],
+    bookmarkItems: storedBookmark || [],
   },
   reducers: {
     addToBookmarkAction: (state, action) => {
