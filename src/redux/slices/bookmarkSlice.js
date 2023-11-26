@@ -4,12 +4,11 @@ export const bookmarkSlice = createSlice({
   name: 'bookmark',
   initialState: {
     bookmarkItems: [],
-    bookmarkQuantity: 0,
   },
   reducers: {
     addToBookmarkAction: (state, action) => {
-      const { id } = action.payload;
-      state.bookmarkItems.push({ id });
+      const { id, title, imageUrl, author } = action.payload;
+      state.bookmarkItems.push({ id, title, imageUrl, author });
       localStorage.setItem('bookmark', JSON.stringify(state.bookmarkItems));
     },
     
