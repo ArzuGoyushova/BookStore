@@ -6,6 +6,7 @@ import BookDetail from "./pages/BookDetail";
 import ShoppingBag from "./pages/ShoppingBag";
 import Checkout from "./pages/Checkout";
 import Bookmark from "./pages/Bookmark";
+import User from "./pages/User";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="basket" element={<ShoppingBag/>} />
           <Route path="checkout" element={<Checkout/>} />
           <Route path="bookmark" element={<Bookmark/>}/>
+          <Route path="user/*" element={<User/>}/>
         </Route>
       </Routes>
     </>
