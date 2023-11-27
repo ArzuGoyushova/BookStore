@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 
-const CheckoutSteps = () => {
+const CheckoutSteps = ({ showConfirmation }) => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
@@ -10,16 +10,20 @@ const CheckoutSteps = () => {
     mobileNumber: '',
   });
 
+  const handleNextStep = () => {
+    if (step < 3) {
+      setStep((prevStep) => prevStep + 1);
+    } else {
+      showConfirmation(true);
+    }
+  };
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleNextStep = () => {
-    setStep((prevStep) => prevStep + 1);
-  };
-
   return (
     <div className='w-full'>
+    
       <div>
         <div className='flex justify-between mb-1'>
           <span className='font-bold text-lg'>Information</span>

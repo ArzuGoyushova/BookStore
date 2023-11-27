@@ -7,6 +7,7 @@ import ShoppingBag from "./pages/ShoppingBag";
 import Checkout from "./pages/Checkout";
 import Bookmark from "./pages/Bookmark";
 import User from "./pages/User";
+import Confirmation from "./components/main/checkout/Confirmation";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="checkout" element={<Checkout/>} />
           <Route path="bookmark" element={<Bookmark/>}/>
           <Route path="user/*" element={<User/>}/>
+          <Route path="checkout/confirmation" element={<Confirmation/>} />
         </Route>
       </Routes>
     </>
