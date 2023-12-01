@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: Trap;
+  src: url(../../src/assets/fonts/Trap-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+header ul li {
+  font-family: Trap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: Trap;
+}
+
+p,
+span,
+label,
+footer ul {
+  font-family: 'Urbanist', sans-serif;
+}
+
+.banner {
+  height: 560px;
+}
+
+.ads::after {
+  content: "";
+  background-color: rgb(241, 216, 220);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -200px;
+  width: 200%;
+  z-index: -1;
+}
+
+.ads {
+  position: relative;
+}
+
+.special-offers::after {
+  content: "";
+  background-color: rgb(241, 216, 220);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -200px;
+  width: 200%;
+  z-index: -1;
+}
+
+.special-offers {
+  position: relative;
+}
+
+.rc-slider-handle {
+  border: 1px solid orangered;
+  background-color: orangered;
+  width: 12px;
+  height: 12px;
+
+}
+
+.rc-slider-track {
+  background-color: rgba(233, 142, 37, 0.61);
+  height: 2px;
+}
+
+.rc-slider-rail {
+  height: 2px;
+}
+
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(244,83,0) lightgray;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(244,83,0);
+  border-radius: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: lightgray;
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(244,83,0) lightgray;
+}
+
+.line {
+  width: 100%; 
+  border-bottom: 2px solid #ccc; 
+  margin-bottom: 12px;
+}
+
+.line-orange {
+  border-bottom: 2px solid rgb(244,83,0);
+}
+
+.line-gray {
+  border-bottom: 2px solid #ccc; 
+}
