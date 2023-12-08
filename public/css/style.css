@@ -76,20 +76,20 @@ footer ul {
 }
 
 .rc-slider-handle {
-  border: 1px solid orangered;
-  background-color: orangered;
-  width: 12px;
-  height: 12px;
+  border: 1px solid orangered !important;
+  background-color: orangered !important;
+  width: 12px !important;
+  height: 12px !important;
 
 }
 
 .rc-slider-track {
-  background-color: rgba(233, 142, 37, 0.61);
-  height: 2px;
+  background-color: rgba(233, 142, 37, 0.61) !important;
+  height: 2px !important;
 }
 
 .rc-slider-rail {
-  height: 2px;
+  height: 2px !important;
 }
 
 

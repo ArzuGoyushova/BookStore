@@ -22,7 +22,7 @@ const Detail = ({ book, addToCart }) => {
         {book ? (
                 <div className='flex space-x-36'>
                     <div className='w-2/5'>
-                        <img src={`../images/books/${book.imageUrl}`} alt={book.title} className="w-full" />
+                        <img src={`./images/books/${book.imageUrl}`} alt={book.title} className="w-full" />
                     </div>
                     <div>
                         <h3 className='lg:text-4xl md:text-2xl text-m mt-10'>{book.title}</h3>
@@ -67,7 +67,7 @@ const Detail = ({ book, addToCart }) => {
                                     className="bg-orange-600 hover:bg-orange-700 text-white py-4 px-12 text-m flex items-center "
                                 >
                                     <span className='me-2'>Buy Now</span>
-                                    <img src='../images/arrow-icon.png' />
+                                    <img src='./images/arrow-icon.png' />
                                 </button>
                             </div>
                         </div>

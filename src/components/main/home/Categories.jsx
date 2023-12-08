@@ -15,15 +15,15 @@ const Categories = () => {
         </div>
         <div className='flex items-center justify-between space-x-4 mt-5'>
           <div className='w-1/3 relative'>
-          <img className='w-full' src='/images/category/Detective.png'/>
+          <img className='w-full' src='./images/category/Detective.png'/>
           <h3 className='absolute bottom-4 left-28 font-bold text-3xl'>Detective</h3>
           </div>
           <div className='w-1/3 relative'>
-        <img className='w-full' src='/images/category/Romantic.png'/>
+        <img className='w-full' src='./images/category/Romantic.png'/>
         <h3 className='absolute bottom-4 left-28 font-bold text-3xl'>Romantic</h3>
         </div>
         <div className='w-1/3 relative'>
-        <img className='w-full' src='/images/category/Psychological.png'/>
+        <img className='w-full' src='./images/category/Psychological.png'/>
         <h3 className='absolute bottom-4 left-24 font-bold text-3xl'>Psychological</h3>
         </div>
         </div>

@@ -19,7 +19,7 @@ const BookCard =  ({ book, onBookClick, addToCart, addToBookmark }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative">
-        <img src={`../images/books/${book.imageUrl}`} alt={book.title} className="w-full" />
+        <img src={`./images/books/${book.imageUrl}`} alt={book.title} className="w-full" />
         {isHovered && (
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
         )}

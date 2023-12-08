@@ -23,13 +23,13 @@ const firstFourBooks = books.slice(0, 4);
           </button>
         </div>
         <div className='banner-image w-1/2'>
-          <img className='w-full' src="../public/images/books/banner.png" />
+          <img className='w-full' src="./images/books/banner.png" />
         </div>
       </section>
       <section className='services w-full flex items-center justify-around my-20'>
         <div className='flex flex-col items-center space-y-2'>
           <div className='bg-orange-100 px-6 py-8 rounded-full'>
-            <img src='../src/assets/icons/truck-icon.png' alt='Truck Icon' />
+            <img src='/assets/icons/truck-icon.png ' alt='Truck Icon' />
           </div>
           <div className='text-center'>
             <h1 className='text-xl font-bold'>Free Shipping</h1>
@@ -38,7 +38,7 @@ const firstFourBooks = books.slice(0, 4);
         </div>
         <div className='flex flex-col items-center space-y-2'>
           <div className='bg-orange-100 p-7 rounded-full'>
-            <img src='../src/assets/icons/price-icon.png' alt='Price Icon' />
+            <img src='/assets/icons/price-icon.png' alt='Price Icon' />
           </div>
           <div className='text-center'>
             <h1 className='text-xl font-bold'>Best Price</h1>
@@ -47,7 +47,7 @@ const firstFourBooks = books.slice(0, 4);
         </div>
         <div className='flex flex-col items-center space-y-2'>
           <div className='bg-orange-100 p-7 rounded-full'>
-            <img src='../src/assets/icons/return-icon.png' alt='Return Icon' />
+            <img src='/assets/icons/return-icon.png' alt='Return Icon' />
           </div>
           <div className='text-center'>
             <h1 className='text-xl font-bold'>Free Returns</h1>
@@ -70,7 +70,7 @@ const firstFourBooks = books.slice(0, 4);
   {firstFourBooks.map((book, index) => (
     <li className='' key={book.id}>
       <a>
-        <img className="w-full" src={`/images/books/${book.imageUrls[0]}`} alt={book.title} />
+        <img className="w-full" src={`./images/books/${book.imageUrls[0]}`} alt={book.title} />
         <p className="font-bold mt-4">{book.title}</p>
         <p className="mt-1">
           {authors
@@ -121,15 +121,15 @@ const firstFourBooks = books.slice(0, 4);
         </div>
         <div className='flex items-center justify-between space-x-4 mt-5'>
           <div className='w-1/3 relative'>
-          <img className='w-full' src='/images/category/Detective.png'/>
+          <img className='w-full' src='./images/category/Detective.png'/>
           <h3 className='absolute bottom-4 left-28 font-bold text-3xl'>Detective</h3>
           </div>
           <div className='w-1/3 relative'>
-        <img className='w-full' src='/images/category/Romantic.png'/>
+        <img className='w-full' src='./images/category/Romantic.png'/>
         <h3 className='absolute bottom-4 left-28 font-bold text-3xl'>Romantic</h3>
         </div>
         <div className='w-1/3 relative'>
-        <img className='w-full' src='/images/category/Psychological.png'/>
+        <img className='w-full' src='./images/category/Psychological.png'/>
         <h3 className='absolute bottom-4 left-24 font-bold text-3xl'>Psychological</h3>
         </div>
         </div>
@@ -150,7 +150,7 @@ const firstFourBooks = books.slice(0, 4);
             .slice(0, 5)
             .map((author) => (
               <div className='text-center'>
-              <img className='rounded-full object-cover w-48 h-48 grayscale mb-5' src={`/images/authors/${author.imageUrl}`} />
+              <img className='rounded-full object-cover w-48 h-48 grayscale mb-5' src={`./images/authors/${author.imageUrl}`} />
               <span className='font-bold text-xl' key={author.id}>{author.fullName}</span>
               <div className="flex space-x-2 justify-center my-3">
       {Array(5).fill().map((_, index) => (

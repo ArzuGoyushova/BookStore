@@ -18,7 +18,7 @@ const SocialMedia = () => {
                         <li className='' key={social.id}>
                             <a>
                                 <div className='relative'>
-                                <img className="w-full" src={`/images/socialMedia/${social.imageUrl}`} />
+                                <img className="w-full" src={`./images/socialMedia/${social.imageUrl}`} />
                                 </div>
                             
                             </a>

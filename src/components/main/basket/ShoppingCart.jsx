@@ -89,7 +89,7 @@ const ShoppingCart = () => {
           className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-12 mt-2 mb-5 text-m flex items-center "
         >
           <span className='me-2'>Checkout</span>
-          <img src='../images/arrow-icon.png' />
+          <img src='./images/arrow-icon.png' />
         </Link>
         </div>
       </div>

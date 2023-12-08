@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsInstagram, BsFacebook, BsTiktok, BsYoutube } from 'react-icons/bs';
+import { BsInstagram, BsTiktok } from 'react-icons/bs';
 import { AiOutlineYoutube } from 'react-icons/ai';
 import {FaFacebookF} from 'react-icons/fa';
 
@@ -10,7 +10,7 @@ const Footer = () => {
    <hr className="w-full h-0.5 mx-auto bg-gray-500"></hr>
     <div className='container mx-auto px-16 flex justify-between items-start my-8'>
     <div>
-      <img src='/images/logo.png'/>
+      <img src='./images/logo.png'/>
     </div>
     <div>
       <ul className='space-y-1'>

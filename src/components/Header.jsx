@@ -29,7 +29,7 @@ const Header = () => {
     <header className='container mx-auto px-16'>
       <nav className='flex justify-between items-center h-16'>
         <div>
-          <img src='../public/images/logo.png' alt="Logo" />
+          <img src='./images/logo.png' alt="Logo" />
         </div>
         <div className='flex justify-around items-center'>
           <ul className="list-unstyled flex items-center flex-grow-1 text-gray-500 font-bold text-sm">

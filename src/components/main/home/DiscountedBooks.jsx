@@ -20,7 +20,7 @@ const DiscountedBooks = () => {
                         <li className='' key={book.id}>
                             <a>
                                 <div className='relative'>
-                                <img className="w-full" src={`/images/books/${book.imageUrl}`} alt={book.title} />
+                                <img className="w-full" src={`./images/books/${book.imageUrl}`} alt={book.title} />
                                 {book.discount>0 ?
                                 <span className='absolute top-4 left-4 bg-orange-500 px-3 py-1 text-sm text-white'>{book.discount}% off</span> : ""}
                                 </div>

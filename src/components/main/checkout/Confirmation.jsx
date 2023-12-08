@@ -18,7 +18,7 @@ const Confirmation = () => {
         <h1 className='text-6xl font-bold my-5'>Successfull!</h1>
         <p className='text-gray-500 text-2xl'>Your payment has been successfully processed</p>
         <button className="my-16 bg-orange-600 hover:bg-orange-700 text-white flex justify-center items-center p-3">
-            <img className='me-3' src="../images/arrowLeft.png" alt="arrow left" />
+            <img className='me-3' src="./images/arrowLeft.png" alt="arrow left" />
             Continue To Shopping</button>
     </div>
     </div>

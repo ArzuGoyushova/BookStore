@@ -20,7 +20,7 @@ const Authors = () => {
             .slice(0, 5)
             .map((author) => (
               <div className='text-center'>
-              <img className='rounded-full object-cover w-48 h-48 grayscale mb-5' src={`/images/authors/${author.imageUrl}`} />
+              <img className='rounded-full object-cover w-48 h-48 grayscale mb-5' src={`./images/authors/${author.imageUrl}`} />
               <span className='font-bold text-xl' key={author.id}>{author.name}</span>
               <div className="flex space-x-2 justify-center my-3">
       {Array(5).fill().map((_, index) => (
