@@ -16,6 +16,9 @@ const BookmarkedItems = () => {
 
   return (
     <>
+      {bookmark.length === 0 ? (
+        <p>You have no bookmarked books.</p>
+      ) : (
         <div className="flex space-x-3 flex-wrap">
         {bookmark.map((item) => (
           <div key={item.id} className="border w-64 p-2">
@@ -38,7 +41,8 @@ const BookmarkedItems = () => {
             </div>
           </div>
         ))}
-      </div>
+        </div>
+      )}
     </>
   )
 }
