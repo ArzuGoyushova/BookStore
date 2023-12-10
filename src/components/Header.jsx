@@ -33,7 +33,7 @@ const Header = () => {
   return (
     <header className='container mx-auto md:px-16 px-4'>
       <nav className='flex justify-between items-center h-16'>
-        <div className='w-32 md:w-full'>
+        <div className='w-32 md:w-1/6'>
           <img src='./images/logo.png' alt="Logo" />
         </div>
 
@@ -101,6 +101,44 @@ const Header = () => {
             </li>
           </ul>
         </div>
+        {mobileMenuOpen && (
+          <div className='md:hidden fixed top-16 left-0 w-full bg-gray-800 bg-opacity-50 z-50'>
+            <div className='flex justify-center items-center'>
+              <ul className='list-unstyled text-center'>
+                {navLinks.map((link, index) => (
+                  <li key={index} className="my-2">
+                    <Link to={link.link} className='text-white'>{link.title}</Link>
+                  </li>
+                ))}
+                <li className="my-2">
+                  <Link to="/user" className='text-white'>
+                   Login
+                  </Link>
+                </li>
+                <li className="my-2 relative">
+                  <Link to="/bookmark" className='text-white'>
+                    Bookmarks
+                  </Link>
+                  {bookmarkQuantity > 0 && (
+                    <div className="absolute top-1 right-0 bg-red-500 text-white rounded-full w-3 h-3 text-[8px] flex items-center justify-center">
+                      {bookmarkQuantity}
+                    </div>
+                  )}
+                </li>
+                <li className="my-2 relative">
+                  <Link to="/basket" className='text-white'>
+                    Shopping Cart
+                  </Link>
+                  {cartQuantity > 0 && (
+                    <div className="absolute top-1 right-0 bg-red-500 text-white rounded-full w-3 h-3 text-[8px] flex items-center justify-center">
+                      {cartQuantity}
+                    </div>
+                  )}
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );
