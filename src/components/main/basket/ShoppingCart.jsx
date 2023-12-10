@@ -31,6 +31,10 @@ const ShoppingCart = () => {
 
   return (
     <>
+      {cart.length === 0 ? (
+        <p className='text-center pb-5'>You have no books in the basket.</p>
+      ) : (
+        <div>
       <div className="">
         {cart.map((item) => (
           <div key={item.id} className="flex justify-between items-center my-4 border-t-2">
@@ -93,6 +97,8 @@ const ShoppingCart = () => {
         </Link>
         </div>
       </div>
+      </div>
+      )}
     </>
   );
 };

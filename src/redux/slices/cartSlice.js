@@ -28,11 +28,8 @@ export const cartSlice = createSlice({
     },
     
     removeFromCartAction: (state, action) => {
-      const { id } = action.payload;
-      const itemIndex = state.cartItems.findIndex(item => item.id === id);
-      if (itemIndex !== -1) {
-        state.cartItems.splice(itemIndex, 1);
-      }
+      const itemIdToRemove = action.payload;
+      state.cartItems = state.cartItems.filter(item => item.id !== itemIdToRemove);
 
       localStorage.setItem('cart', JSON.stringify(state.cartItems));
 

@@ -20,14 +20,12 @@ export const bookmarkSlice = createSlice({
     },
     
     removeFromBookmarkAction: (state, action) => {
-      const { id } = action.payload;
-      const itemIndex = state.bookmarkItems.findIndex(item => item.id === id);
-      if (itemIndex !== -1) {
-        state.bookmarkItems.splice(itemIndex, 1);
-      }
+      const itemIdToRemove = action.payload;
+      state.bookmarkItems = state.bookmarkItems.filter(item => item.id !== itemIdToRemove);
       state.bookmarkQuantity = state.bookmarkItems.length;
       localStorage.setItem('bookmark', JSON.stringify(state.bookmarkItems));
     }
+    
   }
 });
 

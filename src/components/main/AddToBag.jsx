@@ -15,7 +15,7 @@ const AddToBag = ({ book, addToCart }) => {
   return (
     <div className="">
       <button
-        className="bg-orange-600 hover:bg-orange-700 text-white text-sm py-2 px-2 flex justify-center items-center"
+        className=" text-white text-sm flex justify-center items-center"
         onClick={handleAddToCart}
       >
         {addedToCart ? (

@@ -17,7 +17,7 @@ const BookmarkedItems = () => {
   return (
     <>
       {bookmark.length === 0 ? (
-        <p>You have no bookmarked books.</p>
+        <p className='text-center pb-5'>You have no bookmarked books.</p>
       ) : (
         <div className="flex space-x-3 flex-wrap">
         {bookmark.map((item) => (

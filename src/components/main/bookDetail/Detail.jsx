@@ -56,7 +56,7 @@ const Detail = ({ book, addToCart }) => {
                                 <button className='ms-2 px-3 py-4 hover:bg-gray-400' onClick={() => setCount(count + 1)}>+</button>
                             </div>
                             <div>
-          <div>
+          <div className='bg-orange-600 hover:bg-orange-700 py-4 px-12'>
           
                   <AddToBag book={book} addToCart={addToCart}  />
                
