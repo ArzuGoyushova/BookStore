@@ -4,7 +4,7 @@ import { discountedBooks } from '../../../constants/constant';
 
 const DiscountedBooks = () => {
     return (
-        <div className='discounted w-full my-20'>
+        <div className='discounted w-full my-10 md:my-20'>
             <div className='flex items-center justify-between'>
                 <h1 className='md:text-4xl lg:text-6xl sm:text-xl font-semibold'>
                     Our discounted books
@@ -15,7 +15,7 @@ const DiscountedBooks = () => {
                 </a>
             </div>
             <div className='flex items-center'>
-                <ul className="space-x-6 flex justify-between w-full mt-8">
+                <ul className="md:space-x-6 md:flex space-y-4 md:space-y-0 justify-between w-full mt-8">
                     {discountedBooks.map((book, index) => (
                         <li className='' key={book.id}>
                             <a>

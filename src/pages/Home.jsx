@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import Ads from '../components/main/home/Ads';
 import Authors from '../components/main/home/Authors';
 import Banner from '../components/main/home/Banner';

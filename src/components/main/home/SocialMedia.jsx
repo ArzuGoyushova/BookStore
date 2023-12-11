@@ -12,8 +12,8 @@ const SocialMedia = () => {
                     <span className='me-2 underline'>Follow us</span>
                 </a>
             </div>
-            <div className='flex items-center'>
-                <ul className="space-x-6 flex justify-between w-full mt-8">
+            <div className='flex  items-center'>
+                <ul className="md:space-x-6 md:flex justify-between md:w-full mt-8 space-y-4 md:space-y-0">
                     {socials.map((social) => (
                         <li className='' key={social.id}>
                             <a>

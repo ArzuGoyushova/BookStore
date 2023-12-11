@@ -2,7 +2,7 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <div className='services w-full flex items-center justify-around my-20'>
+    <div className='services w-full md:flex items-center justify-around md:my-20 space-y-6 md:space-y-0'>
         <div className='flex flex-col items-center space-y-2'>
           <div className='bg-orange-100 px-6 py-8 rounded-full'>
             <img src='./images/icons/truck-icon.png' alt='Truck Icon' />
