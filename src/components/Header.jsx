@@ -37,7 +37,7 @@ const Header = () => {
           <img src='./images/logo.png' alt="Logo" />
         </div>
 
-        <div className='md:hidden ms-16 cursor-pointer'>
+        <div className='md:hidden ms-52 cursor-pointer'>
           {mobileMenuOpen ? (
             <FiX className='w-6 h-6 text-gray-500' onClick={handleMobileMenu} />
           ) : (

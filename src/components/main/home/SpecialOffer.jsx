@@ -5,7 +5,7 @@ const SpecialOffer = () => {
   return (
     <div className='special-offers w-full flex flex-col md:flex-row items-center justify-around my-10 md:my-20 py-8 md:py-12'>
       <div className='w-full md:w-2/5 mb-4 md:mb-0'>
-        <img className='w-full' src='./images/specialOffer/specialOffer.png' alt='Special Offer' />
+        <img className='w-full ms-8 md:ms-0' src='./images/specialOffer/specialOffer.png' alt='Special Offer' />
       </div>
       <div className='w-full md:w-3/5 space-y-4 text-center md:text-left'>
         <p className='text-lg md:text-2xl text-gray-600'>Special Offers</p>
