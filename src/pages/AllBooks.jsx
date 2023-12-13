@@ -25,11 +25,11 @@ const AllBooks = () => {
       <div className='breadcrump text-sm my-8'>
         <Link className='' to='/home'>Home</Link><span className='font-bold'> / All Books</span>
       </div>
-      <div className='w-full flex space-x-4'>
-      <section className='w-1/3'>
+      <div className='w-full md:flex space-x-4'>
+      <section className=' w-full md:w-1/3 '>
         <Sidebar addFilter={addFilter} removeFilter={removeFilter}  clearAllFilters={clearAllFilters}/>
       </section>
-      <section className='w-2/3'>
+      <section className='w-full md:w-2/3'>
           <Content
             selectedFilters={selectedFilters}
             removeFilter={removeFilter}
