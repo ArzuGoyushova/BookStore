@@ -43,7 +43,7 @@ const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
 
   return (
     <>
-      <div className="contentHeader flex justify-between mb-7">
+      <div className="contentHeader flex justify-between mb-7 mt-10 md:mt-0 border-t-2 md:border-t-0">
         <div className="tags flex space-x-4 text-sm">
           {selectedFilters.map((filter) => (
             <div key={filter.id} className="tag flex px-2 py-1 bg-gray-200 items-center">
@@ -65,7 +65,7 @@ const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
             </button>
           )}
         </div>
-        <div className="sortBy">
+        <div className="sortBy mt-6 me-2 md:mt-0 md:me-0 ">
           <button className="px-2 py-1 flex gap-3 items-center text-sm">
             Sort By <BsChevronDown />
           </button>
