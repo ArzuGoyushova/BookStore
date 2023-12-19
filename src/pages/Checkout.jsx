@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import CheckoutShoppingBag from '../components/main/checkout/CheckoutShoppingBag'
 import CheckoutSteps from '../components/main/checkout/CheckoutSteps'
-import Confirmation from '../components/main/checkout/Confirmation'
 
 const Checkout = () => {
   const navigate = useNavigate();
@@ -20,9 +19,9 @@ const Checkout = () => {
         <span> / Shopping Bag </span>
         <span className='font-bold'> / Checkout </span>
       </div>
-      <div className='flex justify-between'>
-      <div className='w-1/2'><CheckoutSteps showConfirmation={handleShowConfirmation}/></div>
-      <div className='w-1/2'><CheckoutShoppingBag/></div>
+      <div className='md:flex justify-between'>
+      <div className='md:w-1/2'><CheckoutSteps showConfirmation={handleShowConfirmation}/></div>
+      <div className='md:w-1/2'><CheckoutShoppingBag/></div>
       </div>
     </div>
   )

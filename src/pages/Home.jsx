@@ -11,17 +11,23 @@ import Subscribe from '../components/main/home/Subscribe';
 
 const Home = () => {
   return (
+    <>
     <div className='container mx-auto px-16 my-5'>
       <Banner/>
       <Services/>
       <DiscountedBooks/>
+      </div>
       <Ads/>
+      <div className='container mx-auto px-16 my-5'>
       <Categories/>
       <Authors/>
+      </div>
       <SpecialOffer/>
+      <div className='container mx-auto px-16 my-5'>
       <SocialMedia/>
       <Subscribe/>
     </div>
+    </>
   )
 }
 

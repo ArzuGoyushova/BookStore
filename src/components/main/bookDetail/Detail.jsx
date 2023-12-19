@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import { Link, useNavigate } from 'react-router-dom';
 import AddToBag from '../AddToBag';
 
 const Detail = ({ book, addToCart }) => {
   const [count, setCount] = useState(1);
+  const navigate = useNavigate();
 
   const renderStars = (count) => {
     const stars = [];
@@ -15,6 +17,12 @@ const Detail = ({ book, addToCart }) => {
     }
     return stars;
   };
+
+  const handleBuyNow = async (book) => {
+    await addToCart(book);
+    navigate('/checkout');
+  };
+  
 
   return (
     <div className='flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0'>
@@ -38,7 +46,7 @@ const Detail = ({ book, addToCart }) => {
             <p className='font-bold my-2 lg:text-xl md:text-m text-m'>
               ${book.regularPrice}
             </p>
-            <div className='flex md:flex-col md:flex-row md:space-y-4 space-x-16 mt-4'>
+            <div className='flex md:flex-row space-x-20 md:space-x-16 mt-4'>
               <div className='space-y-3'>
                 <p className='text-gray-500'>Genre: </p>
                 <p className='text-gray-500'>Format: </p>
@@ -72,11 +80,11 @@ const Detail = ({ book, addToCart }) => {
                   +
                 </button>
               </div>
-              <div className='bg-orange-600 hover:bg-orange-700 py-4 px-12'>
+              <div className='bg-orange-600 hover:bg-orange-700 py-2.5 px-7'>
                 <AddToBag book={book} addToCart={addToCart} />
               </div>
               <div>
-                <button className='bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 text-m flex items-center'>
+                <button onClick={() => { handleBuyNow(book) }} className='bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 text-m flex items-center'>
                   <span className='me-2'>Buy Now</span>
                   <img src='./images/arrow-icon.png' alt='Arrow Icon' />
                 </button>

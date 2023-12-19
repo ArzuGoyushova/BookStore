@@ -1,24 +1,28 @@
 import React from 'react';
 import {BsArrowRight } from 'react-icons/bs'
+import { Link } from 'react-router-dom';
 import { discountedBooks } from '../../../constants/constant';
 
 const DiscountedBooks = () => {
+
+
     return (
         <div className='discounted w-full my-10 md:my-20'>
             <div className='flex items-center justify-between'>
                 <h1 className='md:text-4xl lg:text-6xl sm:text-xl font-semibold'>
                     Our discounted books
                 </h1>
-                <a href="#" className='flex items-center'>
+                <Link to="/all-books" className='flex items-center'>
                     <span className='me-2'>view all</span>
                     <BsArrowRight />
-                </a>
+                </Link>
             </div>
             <div className='flex items-center'>
                 <ul className="md:space-x-6 md:flex space-y-4 md:space-y-0 justify-between w-full mt-8">
                     {discountedBooks.map((book, index) => (
-                        <li className='' key={book.id}>
-                            <a>
+                       <Link to={`/book-detail/${book.id}`}>
+                        <li key={book.id}>
+                            
                                 <div className='relative'>
                                 <img className="w-full" src={`./images/books/${book.imageUrl}`} alt={book.title} />
                                 {book.discount>0 ?
@@ -36,8 +40,9 @@ const DiscountedBooks = () => {
                                 ) : (
                                     <span className='text-gray-500'>${book.regularPrice}</span>
                                 )}
-                            </a>
+                            
                         </li>
+                        </Link>
                     ))}
                 </ul>
 

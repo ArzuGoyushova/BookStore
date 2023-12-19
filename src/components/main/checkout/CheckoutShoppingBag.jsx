@@ -42,22 +42,23 @@ const CheckoutShoppingBag = () => {
     }, [cart]);
   
     return (
-      <div className="ms-20">
+      <div className="md:ms-20">
         <div>
-            <span className='text-2xl'>Shopping Bag</span>
+            <span className='text-2xl hidden md:flex'>Shopping Bag</span>
           {cart.map((item) => (
-            <div key={item.id} className="flex justify-between my-2 border-b-2 pb-2">
-              <div className='w-1/5'>
-                <img className='w-40 h-24 object-contain bg-gray-100' src={`./images/books/${item.imageUrl}`} />
+            <div key={item.id} className="md:flex justify-between my-2 border-b-2 pb-2 space-y-4">
+              <div className='md:w-1/5 w-full'>
+                <img className=' w-full md:w-40 h-24 object-contain bg-gray-100' src={`./images/books/${item.imageUrl}`} />
               </div>
-              <div className='w-1/5'>
+              <div className='md:w-1/5'>
                 <h3 className="md:text-xl text-m font-bold">{item.title}</h3>
                 <p className="text-gray-500">{item.author}</p>
               </div>
-              <div className='w-1/5 font-bold'>
+              <div className='flex justify-between items-center border p-2 md:border-0 md:p-0 md:block'>
+              <div className='md:w-1/5 font-bold'>
                 ${item.regularPrice}
               </div>
-              <div className='w-1/5'>
+              <div className='md:w-1/5'>
                 <button
                   className="font-bold"
                   onClick={() => {
@@ -79,6 +80,7 @@ const CheckoutShoppingBag = () => {
               <button onClick={() => removeFromCart(item.id)} className="flex items-start text-gray-800">
                 <BiX className='w-6 h-6' />
               </button>
+              </div>
             </div>
           ))}
         </div>
@@ -86,10 +88,10 @@ const CheckoutShoppingBag = () => {
             <input
             type='text'
             placeholder='Discount code'
-            className='p-2 border border-gray-400 w-4/5'
+            className='p-2 border border-gray-400 w-2/3 md:w-4/5'
             />
           <button
-            className="w-2/5 bg-orange-600 hover:bg-orange-700 text-white py-2 px-12 text-m"
+            className=" w-1/3 md:w-1/5 bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 md:px-12 text-m"
           >
             <span>Apply</span>
           </button>

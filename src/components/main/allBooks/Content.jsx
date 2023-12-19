@@ -7,6 +7,7 @@ import Pagination from './Pagination';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCartAction } from '../../../redux/slices/cartSlice';
 import { addToBookmarkAction } from '../../../redux/slices/bookmarkSlice';
+import SortBy from './SortBy';
 
 
 const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
@@ -65,10 +66,8 @@ const Content = ({ selectedFilters, removeFilter, clearAllFilters }) => {
             </button>
           )}
         </div>
-        <div className="sortBy mt-6 me-2 md:mt-0 md:me-0 ">
-          <button className="px-2 py-1 flex gap-3 items-center text-sm">
-            Sort By <BsChevronDown />
-          </button>
+        <div>
+         <SortBy/>
         </div>
       </div>
     

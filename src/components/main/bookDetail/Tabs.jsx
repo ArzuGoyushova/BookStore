@@ -11,17 +11,17 @@ const Tabs = ({book}) => {
     const renderTabContent = () => {
         switch (activeTab) {
             case 'aboutBook':
-                return <div className='w-1/3 ms-36'>
+                return <div className='w-full md:w-1/3 ms-4 md:ms-36'>
                     <h3 className='md:text-2xl mt-10'>Introduction</h3>
                     <p className='text-gray-600'>{book.bookDesc}</p>
                 </div>;
             case 'aboutAuthor':
-                return <div className='w-1/3 ms-[520px]'>
+                return <div className='w-full md:w-1/3 ms-4 md:ms-[520px]'>
                 <h3 className='md:text-2xl mt-10'>Author</h3>
                 <p className='text-gray-600  leading-relaxed'>{book.authorDesc}</p>
             </div>;
             case 'reviews':
-                return <div className='w-1/3 ms-36 mt-10'>{
+                return <div className='w-full md:w-1/3 ms-4 md:ms-36 mt-10'>{
                     book.reviews.map((review)=>(
                         <div key={review.by}>
                         <p className='font-bold text-xl'>{review.by}</p>

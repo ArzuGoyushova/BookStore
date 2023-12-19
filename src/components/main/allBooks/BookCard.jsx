@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BsBookmark, BsBag } from 'react-icons/bs';
 import AddToBag from '../AddToBag';
 import { Link } from 'react-router-dom';
 import AddToBookmark from '../AddToBookmark';
@@ -44,7 +43,7 @@ const BookCard =  ({ book, onBookClick, addToCart, addToBookmark }) => {
             <span className="text-red-500 line-through mr-2">${book.oldPrice}</span>
           )}
           {book.regularPrice > 0 && (
-            <span className="">${book.regularPrice}</span>
+            <span>${book.regularPrice}</span>
           )}
         </div>
       </div>

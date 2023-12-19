@@ -98,7 +98,15 @@ export const authors = [
         imageUrl: "JKRowling.png"
     },
 ];
-
+export const categories = [
+    { id: 1, name: 'Detective', image: './images/category/Detective.png' },
+    { id: 2, name: 'Romantic', image: './images/category/Romantic.png' },
+    { id: 3, name: 'Psychological', image: './images/category/Psychological.png' },
+    { id: 4, name: 'Detective', image: './images/category/Detective.png' },
+    { id: 5, name: 'Romantic', image: './images/category/Romantic.png' },
+    { id: 6, name: 'Psychological', image: './images/category/Psychological.png' },
+  ];
+  
 export const socials = [
     {
         id: "1",

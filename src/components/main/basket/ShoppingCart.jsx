@@ -37,18 +37,19 @@ const ShoppingCart = () => {
         <div>
       <div className="">
         {cart.map((item) => (
-          <div key={item.id} className="flex justify-between items-center my-4 border-t-2">
-            <div className='w-1/5 mt-4'>
+          <div key={item.id} className="md:flex md:justify-between md:items-center my-4 border-t-2 space-y-4 md:space-y-0">
+            <div className='md:w-1/5 mt-4'>
               <img className='w-60 h-40 object-contain bg-gray-100' src={`./images/books/${item.imageUrl}`} />
             </div>
-            <div className='w-1/5'>
+            <div className='md:w-1/5'>
               <h3 className="md:text-xl text-m font-bold">{item.title}</h3>
               <p className="text-gray-500">{item.author}</p>
             </div>
-            <div className='w-1/5 font-bold'>
+            <div className='flex justify-around items-center border p-2 md:border-0  md:p-0 md:block'>
+            <div className='md:w-1/5 font-bold'>
               ${item.regularPrice}
             </div>
-            <div className='w-1/5'>
+            <div className='md:w-1/5'>
               <button
                 className="font-bold"
                 onClick={() => {
@@ -70,11 +71,12 @@ const ShoppingCart = () => {
             <button onClick={() => removeFromCart(item.id)} className="text-gray-800">
               <BiX className='w-8 h-8' />
             </button>
+            </div>
           </div>
         ))}
       </div>
       <div className='w-full border-t-2'>
-        <div className='float-right'>
+        <div className='md:float-right'>
         <div className='flex justify-between w-48 mt-4'>
           <div className='flex flex-col space-y-2'>
             <span className='text-gray-600'>Books</span>

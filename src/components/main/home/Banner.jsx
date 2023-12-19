@@ -1,5 +1,6 @@
 import React from 'react';
 import {BsArrowRight} from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
@@ -11,8 +12,10 @@ const Banner = () => {
           <p className='text-sm md:pe-36 text-gray-500'>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
           </p>
-          <button className='flex ms-12 md:ms-0 justify-center items-center border px-5 py-2 bg-orange-600 text-white'>
+          <button className='ms-4 md:ms-0 border px-5 py-2 bg-orange-600 text-white'>
+          <Link className='flex justify-center items-center' to={`/book-detail/10`}>
             Buy Now <BsArrowRight className='mx-4' />
+            </Link>
           </button>
         </div>
         <div className='banner-image w-full md:w-1/2'>
