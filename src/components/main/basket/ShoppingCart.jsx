@@ -45,7 +45,7 @@ const ShoppingCart = () => {
               <h3 className="md:text-xl text-m font-bold">{item.title}</h3>
               <p className="text-gray-500">{item.author}</p>
             </div>
-            <div className='flex justify-around items-center border p-2 md:border-0  md:p-0 md:block'>
+            <div className='md:w-2/5 flex justify-around items-center border p-2 md:border-0  md:p-0 md:flex-row'>
             <div className='md:w-1/5 font-bold'>
               ${item.regularPrice}
             </div>
