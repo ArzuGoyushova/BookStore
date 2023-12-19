@@ -7,9 +7,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
+body{
+  overflow-x: hidden;
+}
 
 @font-face {
   font-family: Trap;
@@ -43,34 +45,12 @@ footer ul {
   height: 560px;
 }
 
-.ads::after {
-  content: "";
-  background-color: rgb(241, 216, 220);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -200px;
-  width: 200%;
-  z-index: -1;
-}
-
 .ads {
-  position: relative;
-}
-
-.special-offers::after {
-  content: "";
   background-color: rgb(241, 216, 220);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -200px;
-  width: 200%;
-  z-index: -1;
 }
 
 .special-offers {
-  position: relative;
+  background-color: rgb(241, 216, 220);
 }
 
 .rc-slider-handle {
@@ -109,10 +89,6 @@ footer ul {
   background-color: lightgray;
 }
 
-.scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: rgb(244,83,0) lightgray;
-}
 
 .line {
   width: 100%; 
